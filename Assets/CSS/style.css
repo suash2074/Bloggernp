@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* NAVAGATION CSS STARTS HERE */
+
+.navagation {
+    width: 100%;
+    height: 133.5px;
+
+}
+
+.navagation>.logo {
+    width: 100%;
+    height: 98px;
+    display: flex;
+    justify-content: center;
+    /* background: #bd3535 !important;  */
+}
+
+.navagation>.logo>img {
+    /* background: inherit !important; */
+    /* border:2px solid #0f0f0f; */
+    width: 250px;
+    height: 98px;
+    object-fit: cover;
+}
+
+.navagation  > .nav__list {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+}
+
+.navagation > .nav__list > ul {
+    width: calc(100% - 200px);
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    align-items: center;
+
+}
+
+.navagation > .nav__list > ul > li > a{
+    color: #8d8d8d;
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace
+    /* background-color: #6b6b6b !important; */
+}
+
+/* NAVAGATION CSS ENDS HERE */
+
+
+/* BLOG PREVIEW CSS STARTS HERE */
+
+.blog__preview{
+    position: relative;
+    width: 100%;
+    /* height: 5rem; */
+}
+
+.blog__preview > .preview__image > img{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 32rem;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.blog__preview > .preview__details{
+    background-color: transparent;
+}
+
+/* BLOG PREVIEW CSS ENDS HERE */
