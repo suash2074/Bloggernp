@@ -281,17 +281,29 @@
 /* CATEGORY SECTION CSS ENDS HERE */
 
 /* NEWS SLDIER CSS STARTS HERE */
+.slider__container {
+    width: 100%;
+    height: 70vh;
+    margin: auto;
+    background-color: #f4f2f2;
+}
 
-.container>.news__slider {
-    width: 95%;
+.slider__container>.swiper-wrapper {
+    width: 100%;
+    /* margin: auto; */
+    background-color: #f4f2f2;
+
+}
+
+.slider__container>.swiper-wrapper>.news__slider {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin: auto;
     background-color: #ffffff;
-
 }
 
-.container>.news__slider>.news__slider__image {
+.slider__container>.swiper-wrapper>.news__slider>.news__slider__image {
     position: relative;
     width: 50%;
     /* height: 20rem; */
@@ -299,13 +311,13 @@
 
 }
 
-.container>.news__slider>.news__slider__image>img {
+.slider__container>.swiper-wrapper>.news__slider>.news__slider__image>img {
     width: 100%;
-    height: inherit;
+    height: 70vh;
     object-fit: cover;
 }
 
-.container>.news__slider>.news__slider__image>.arrow__buttons {
+.slider__container>.swiper-wrapper>.news__slider>.news__slider__image>.arrow__buttons {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -314,7 +326,7 @@
     justify-content: space-between;
 }
 
-.container>.news__slider>.news__slider__image>.arrow__buttons>a {
+.slider__container>.swiper-wrapper>.news__slider>.news__slider__image>.arrow__buttons>i {
     width: 60px;
     height: 60px;
     color: rgba(227, 225, 225, 0.751);
@@ -326,11 +338,8 @@
     transition: 1s ease-in-out;
 }
 
-/* .container>.news__slider>.news__slider__image>.arrow__buttons>a>i {
-} */
 
-
-.container>.news__slider>.news__slider__details {
+.slider__container>.swiper-wrapper>.news__slider>.news__slider__details {
     display: flex;
     width: 50%;
     flex-wrap: wrap;
@@ -339,28 +348,30 @@
     padding: 20px 50px;
 }
 
-.container>.news__slider>.news__slider__details>.category,
-.container>.news__slider>.news__slider__details>.upload__date {
+.slider__container>.swiper-wrapper>.news__slider>.news__slider__details>.category,
+.slider__container>.swiper-wrapper>.news__slider>.news__slider__details>.upload__date {
     margin-right: 10px;
     /* margin-bottom: 25px; */
 }
 
-.container>.news__slider>.news__slider__details>.upload__date {
+.slider__container>.swiper-wrapper>.news__slider>.news__slider__details>.upload__date {
     color: #828282;
 
 }
-.container>.news__slider>.news__slider__details>.news__slider__title {
+
+.slider__container>.swiper-wrapper>.news__slider>.news__slider__details>.news__slider__title {
     margin: 20px 0px;
 }
 
-.container>.news__slider>.news__slider__details>.news__slider__description {
+.slider__container>.swiper-wrapper>.news__slider>.news__slider__details>.news__slider__description {
     margin-bottom: 20px;
     color: #828282;
 }
 
-.container>.news__slider>.news__slider__details>.user__profile>p>.user__name {
+.slider__container>.swiper-wrapper>.news__slider>.news__slider__details>.user__profile>p>.user__name {
     font-weight: bold;
 }
+
 /* NEWS SLDIER CSS ENDS HERE */
 
 @media screen and (max-width: 768px) {
@@ -391,4 +402,7 @@
     .category__container>ul {
         margin: 10px 0px 20px 10px;
     }
+
+
+    
 }

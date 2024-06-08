@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blogernp</title>
 
-    <link rel="stylesheet" href="Assets/CSS/style.css" />
-
     <!-- Fontawesome CDN -->
     <link
       rel="stylesheet"
@@ -15,6 +13,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="Assets/CSS/style.css" />
   </head>
   <body>
     <!-- Header includes logo and navagation links -->
@@ -259,35 +263,89 @@
       <!-- End of aside section -->
     </main>
 
-    <section class="container">
-      <section class="news__slider">
-        <figure class="news__slider__image">
-          <img src="Assets/Images/previewImage.jpg" alt="Laptop and books" />
-          <div class="arrow__buttons">
-            <a href="#"><i class="fa-solid fa-arrow-left"></i></a>
-            <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-        </figure>
+    <!-- Starting of slider section -->
+    <section class="swiper mySwiper slider__container">
+      <div class="swiper-wrapper">
+        <section class="swiper-slide news__slider">
+          <figure class="news__slider__image">
+            <img src="Assets/Images/previewImage.jpg" alt="Laptop and books" />
+            <div class="arrow__buttons">
+              <i class="swiper-button-next"></i>
+              <i class="swiper-button-prev"></i>
+            </div>
+          </figure>
 
-        <div class="news__slider__details">
-          <p class="category">Technology</p>
-          <p class="upload__date">
-            <i class="fa-regular fa-calendar-days"></i>
-            May 5th 2004
-          </p>
-          <h2 class="news__slider__title">
-            Spot Misinformation online with these tips
-          </h2>
-          <p class="news__slider__description">
-            How effectively the massive shopping center can repurpose more than
-            300,000 square feet soon to be vacated.
-          </p>
-          <div class="user__profile">
-            <img src="Assets/Images/User-1.jpg" alt="User name Joshep Mathew" />
-            <p>By <span class="user__name"> Joshep Mathew </span></p>
+          <div class="news__slider__details">
+            <p class="category">Technology</p>
+            <p class="upload__date">
+              <i class="fa-regular fa-calendar-days"></i>
+              May 5th 2004
+            </p>
+            <h2 class="news__slider__title">
+              Spot Misinformation online with these tips
+            </h2>
+            <p class="news__slider__description">
+              How effectively the massive shopping center can repurpose more
+              than 300,000 square feet soon to be vacated.
+            </p>
+            <div class="user__profile">
+              <img
+                src="Assets/Images/User-1.jpg"
+                alt="User name Joshep Mathew"
+              />
+              <p>By <span class="user__name"> Joshep Mathew </span></p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        <section class="swiper-slide news__slider">
+          <figure class="news__slider__image">
+            <img
+              src="Assets/Images/Article_image2.jpg"
+              alt="Laptop and books"
+            />
+            <div class="arrow__buttons">
+              <i class="swiper-button-next"></i>
+              <i class="swiper-button-prev"></i>
+            </div>
+          </figure>
+
+          <div class="news__slider__details">
+            <p class="category">Technology</p>
+            <p class="upload__date">
+              <i class="fa-regular fa-calendar-days"></i>
+              May 5th 2004
+            </p>
+            <h2 class="news__slider__title">
+              Spot Misinformation online with these tips
+            </h2>
+            <p class="news__slider__description">
+              How effectively the massive shopping center can repurpose more
+              than 300,000 square feet soon to be vacated.
+            </p>
+            <div class="user__profile">
+              <img
+                src="Assets/Images/User-1.jpg"
+                alt="User name Joshep Mathew"
+              />
+              <p>By <span class="user__name"> Joshep Mathew </span></p>
+            </div>
+          </div>
+        </section>
+      </div>
     </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script src="Assets/JS/app.js"></script>
   </body>
 </html>
