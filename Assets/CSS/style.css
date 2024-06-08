@@ -158,6 +158,7 @@
 .container {
     width: 100%;
     background-color: #f4f2f2;
+    padding-bottom: 30px;
 }
 
 .container>.wrapper {
@@ -199,7 +200,7 @@
     width: 300px;
 }
 
-.wrapper>.news__container>.news__card>.news__image> img {
+.wrapper>.news__container>.news__card>.news__image>img {
     width: 100%;
     height: 12rem;
     border-radius: 3px;
@@ -214,7 +215,7 @@
 }
 
 .wrapper>.news__container>.news__card>.news__card__body>.news__title {
-   margin: 10px 0;
+    margin: 10px 0;
 }
 
 
@@ -235,9 +236,10 @@
     justify-content: flex-end;
 }
 
-.fa-regular{
+.fa-regular {
     margin-right: 5px;
 }
+
 /* NEWS SECTION CSS ENDS HERE */
 
 
@@ -279,6 +281,29 @@
 
 /* CATEGORY SECTION CSS ENDS HERE */
 
+/* NEWS SLDIER CSS STARTS HERE */
+
+.container>.news__slider {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    background-color: #ffffff;
+
+}
+
+.container>.news__slider>.news__slider__image{
+    width: 45%;
+}
+
+.container>.news__slider>.news__slider__image>img{
+    width: 100%;
+}
+
+
+
+
+/* NEWS SLDIER CSS ENDS HERE */
 
 @media screen and (max-width: 768px) {
     .wrapper>.news__container>.news__card {
@@ -309,4 +334,3 @@
         margin: 10px 0px 20px 10px;
     }
 }
-
