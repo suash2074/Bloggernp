@@ -105,9 +105,7 @@
     padding: clamp(4px, 1vw, 6px);
     font-weight: bold;
     color: #df2f2f;
-    /* border-radius: 5px; */
     background-color: #dfe2e2;
-    /* box-shadow: 3px 3px white; */
 
 }
 
@@ -118,12 +116,13 @@
     padding: clamp(4px, 1vw, 6px) clamp(8px, 2vw, 10px);
 }
 
-.blog__preview>.preview__details>.preview__title {
+.blog__preview>.preview__details>.preview__title,
+.news__slider__title {
     width: clamp(80%, 90vw, 100%);
     font-size: clamp(2rem, 5vw, 3rem);
 }
 
-.blog__preview>.preview__details>.preview__discription {
+.blog__preview>.preview__details>.preview__description {
     width: clamp(70%, 80vw, 90%);
     font-size: clamp(0.8rem, 2.5vw, 1rem);
     color: #c0bfbf;
@@ -292,17 +291,76 @@
 
 }
 
-.container>.news__slider>.news__slider__image{
-    width: 45%;
+.container>.news__slider>.news__slider__image {
+    position: relative;
+    width: 50%;
+    /* height: 20rem; */
+    object-fit: cover;
+
 }
 
-.container>.news__slider>.news__slider__image>img{
+.container>.news__slider>.news__slider__image>img {
     width: 100%;
+    height: inherit;
+    object-fit: cover;
 }
 
+.container>.news__slider>.news__slider__image>.arrow__buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container>.news__slider>.news__slider__image>.arrow__buttons>a {
+    width: 60px;
+    height: 60px;
+    color: rgba(227, 225, 225, 0.751);
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    transition: 1s ease-in-out;
+}
+
+/* .container>.news__slider>.news__slider__image>.arrow__buttons>a>i {
+} */
 
 
+.container>.news__slider>.news__slider__details {
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    padding: 20px 50px;
+}
 
+.container>.news__slider>.news__slider__details>.category,
+.container>.news__slider>.news__slider__details>.upload__date {
+    margin-right: 10px;
+    /* margin-bottom: 25px; */
+}
+
+.container>.news__slider>.news__slider__details>.upload__date {
+    color: #828282;
+
+}
+.container>.news__slider>.news__slider__details>.news__slider__title {
+    margin: 20px 0px;
+}
+
+.container>.news__slider>.news__slider__details>.news__slider__description {
+    margin-bottom: 20px;
+    color: #828282;
+}
+
+.container>.news__slider>.news__slider__details>.user__profile>p>.user__name {
+    font-weight: bold;
+}
 /* NEWS SLDIER CSS ENDS HERE */
 
 @media screen and (max-width: 768px) {
