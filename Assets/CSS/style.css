@@ -449,6 +449,8 @@ body {
 /* RECENTLY VIEW CSS ENDS HERE */
 
 
+/* Mail SECTION CSS STARTS HERE */
+
 .mail__for__news {
     position: relative;
     width: 95%;
@@ -511,6 +513,30 @@ body {
 .mail__for__news>form>input::placeholder {
     color: rgb(73, 72, 72);
 }
+
+/* Mail SECTION CSS ENDS HERE */
+
+/* ADVERTISMENT SETION CSS STARTS HERE */
+
+.advertisement__section1,
+.advertisement__section2{
+width: 95%;
+height: 30vh;
+ margin: auto;
+ margin-bottom: 30px;
+}
+
+.advertisement__section1>img,
+.advertisement__section2>img {
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+}
+
+/* ADVERTISMENT SETION CSS ENDS HERE */
+
+
+
 
 @media (max-width: 1200px) {
     .chamber>.wrapper>.card__container>.card {
