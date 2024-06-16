@@ -459,7 +459,7 @@ body {
     background: #EC1D23;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-content: center;
     flex-wrap: wrap;
     color: white !important;
 }
@@ -470,7 +470,6 @@ body {
     width: 100%;
     height: inherit;
     background: url(../Images/Article_image1.jpg);
-    /* object-fit: cover; */
     background-size: cover;
     opacity: 0.3;
     z-index: 2;
@@ -481,9 +480,13 @@ body {
     padding: 10px;
 }
 
+.mail__for__news>.mail__text {
+    align-content: center;
+}
+
 .mail__for__news>.mail__text>p:nth-child(1) {
     font-size: clamp(1rem, 2vw, 1.2rem);
-    padding: 8px 10px;
+    padding: 5px 10px;
 }
 
 .mail__for__news>.mail__text>p:nth-child(2) {
@@ -507,9 +510,6 @@ body {
     border: none;
 }
 
-/* .mail__for__news>form>input:focus {
-    border: none;
-} */
 .mail__for__news>form>input::placeholder {
     color: rgb(73, 72, 72);
 }
@@ -519,11 +519,11 @@ body {
 /* ADVERTISMENT SETION CSS STARTS HERE */
 
 .advertisement__section1,
-.advertisement__section2{
-width: 95%;
-height: 30vh;
- margin: auto;
- margin-bottom: 30px;
+.advertisement__section2 {
+    width: 95%;
+    height: 30vh;
+    margin: auto;
+    margin-bottom: 30px;
 }
 
 .advertisement__section1>img,
@@ -535,7 +535,128 @@ height: 30vh;
 
 /* ADVERTISMENT SETION CSS ENDS HERE */
 
+/* FOOTER SECTION CSS STARTS HERE */
 
+.footer__container {
+    width: 100%;
+    height: fit-content;
+    background-color: #aeadad;
+    background-color: #111111;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 20px 30px;
+}
+
+.footer__container>.about__company {
+    width: 30%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+    /* align-content: center; */
+}
+
+.footer__container>.about__company>.logo {
+    width: 100%;
+    height: 120px;
+}
+
+.footer__container>.about__company>.logo>img {
+    width: 320px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.footer__container>.about__company>.company__description {
+    font-size: 1rem;
+    color: #999999;
+    padding: 20px 0;
+    line-height: 1.6;
+}
+
+.footer__container>.social__links {
+    width: 30%;
+}
+
+.footer__container>.social__links>.footer__headline,
+.footer__headline {
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.footer__container>.social__links>.social__container {
+    padding-top: 30px;
+}
+
+.footer__container>.social__links>.social__container>.social__card {
+    background-color: #fff;
+    margin: 15px 15px 15px 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.footer__container>.social__links>.social__container>.social__card>.social__image>img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.footer__container>.social__links>.social__container>.social__card>.likes>span {
+    font-weight: bold;
+    padding-left: 30px;
+}
+
+.footer__container>.social__links>.social__container>.social__card>.likes {
+    padding-right: 30px;
+}
+
+.footer__container>.social__links>.social__container>.social__card>.social__btn {
+    width: fit-content;
+    padding: 0 20px;
+    height: 40px;
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.footer__container>.social__links>.social__container>.social__card>.social__btn:hover {
+    box-shadow: 5px 5px 10px #eae8e8, -5px -5px 10px #eae8e8;
+}
+
+.footer__container>.social__links>.social__container>.social__card>.social__btn>a {
+    color: #111111;
+}
+
+.footer__container>.company__info {
+    width: 30%;
+}
+
+.company__info .info__links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.company__info .footer__headline {
+    margin-bottom: 40px;
+}
+
+.company__info .info__links>a {
+    text-decoration: none;
+    color: #999999;
+    padding-bottom: 15px;
+}
+
+.company__info .info__links a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER SECTION CSS ENDS HERE */
 
 
 @media (max-width: 1200px) {
