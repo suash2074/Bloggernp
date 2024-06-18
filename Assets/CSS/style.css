@@ -25,12 +25,9 @@ body {
     height: 98px;
     display: flex;
     justify-content: center;
-    /* background: #bd3535 !important;  */
 }
 
 .navagation>.logo>img {
-    /* background: inherit !important; */
-    /* border:2px solid #0f0f0f; */
     width: 250px;
     height: 98px;
     object-fit: cover;
@@ -51,14 +48,55 @@ body {
     text-transform: uppercase;
     align-items: center;
     list-style: none;
+    position: relative;
 
 }
 
 .navagation>.nav__list>ul>li>a {
     color: #8d8d8d;
     font-weight: bold;
-    font-family: 'Courier New', Courier, monospace
-        /* background-color: #6b6b6b !important; */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navagation>.nav__list>ul>li>a>i {
+    transition: 0.5s ease-in-out;
+}
+
+.navagation>.nav__list>ul>li>a:hover>i {
+    transform: rotate(180deg);
+
+}
+
+.navagation>.nav__list>ul>li>.dropdown {
+    width: fit-content;
+    position: absolute;
+    list-style: none;
+    background-color: #fff;
+    z-index: 999;
+    display: none;
+    transition: 0.5s ease-in-out;
+
+}
+
+.navagation>.nav__list>ul>li>.dropdown>li {
+    display: block;
+    padding: 10px 10px 10px 15px;
+}
+
+.navagation>.nav__list>ul>li>.dropdown>li>a {
+    color: #8d8d8d;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navagation>.nav__list>ul>li:hover>.dropdown {
+    display: block;
+}
+
+.navagation>.nav__list>ul>li>.dropdown>li:hover {
+    transition: 0.5s ease-in-out;
+    background-color: #e4e2e2;
+
 }
 
 /* NAVAGATION CSS ENDS HERE */
