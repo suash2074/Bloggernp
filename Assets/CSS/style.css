@@ -62,7 +62,7 @@ body {
     transition: 0.5s ease-in-out;
 }
 
-.navagation>.nav__list>ul>li>a:hover>i {
+.navagation>.nav__list>ul>li:hover>a>i {
     transform: rotate(180deg);
 
 }
@@ -546,10 +546,23 @@ body {
     background-color: #c5c4c4a2;
     font-weight: bold;
     border: none;
+    display: flex;
+}
+
+.mail__for__news>form>input:focus {
+    outline: none;
 }
 
 .mail__for__news>form>input::placeholder {
     color: rgb(73, 72, 72);
+}
+
+.mail__for__news>form>#email__error {
+    position: absolute;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    display: none;
+    transition: 1s ease-in-out;
 }
 
 /* Mail SECTION CSS ENDS HERE */

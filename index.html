@@ -385,8 +385,6 @@
   </section>
   <!-- End of slider section -->
 
-  <!-- Starting of recently view section -->
-
   <!-- Start of Recently viewed section -->
   <main class="chamber">
     <section class="wrapper">
@@ -483,8 +481,8 @@
     </div>
 
     <form action="">
-      <input type="text" placeholder="Enter your email">
-
+      <input id="email__field" type="text" placeholder="Enter your email" onkeyup="validateEmail()">
+      <span id="email__error">Error Msg</span>
     </form>
   </section>
   <!-- Mail section Ends -->
