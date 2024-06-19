@@ -730,26 +730,7 @@ body {
 }
 
 @media (max-width: 992px) {
-    .chamber>.wrapper>.card__container>.card {
-        width: 48%;
-        /* Adjust width for 2 cards per row */
-    }
 
-    .footer__container>.about__company {
-        width: 100%;
-    }
-
-    .footer__container>.social__links {
-        width: 48%;
-    }
-
-    .footer__container>.company__info {
-        width: 48%;
-    }
-
-}
-
-@media screen and (max-width: 768px) {
     .navagation>.hamburger {
         display: block;
     }
@@ -762,11 +743,11 @@ body {
         height: fit-content;
         background: #fff;
         padding: 30px;
-        transition: 0.3s;
+        transition: 0.3s ease-in-out;
         z-index: 1;
     }
 
-    .navagation #nav_check:checked ~ nav{
+    .navagation #nav_check:checked~nav {
         left: 0;
     }
 
@@ -776,14 +757,16 @@ body {
     }
 
     .navagation>.nav__list>ul>li {
-        padding-bottom: 20px;
+        padding-bottom: clamp(10px, 2vw, 20px);
+        /* Using clamp for padding */
     }
 
     .navagation>.nav__list>ul:nth-last-child(1)>li>.dropdown {
         box-shadow: 5px 5px 10px #d6d4d4, -5px -5px 10px #d6d4d4;
-        left: 24vh;
-        top: 6vh;
-        width: calc(100% - 130px);
+        left: clamp(21vh, 45vw, 24vh);
+        /* Using clamp for left positioning */
+        top: 3vh;
+        width: calc(90% - 135px);
     }
 
     .navagation>.nav__list>ul>li>.dropdown>li {
@@ -806,6 +789,28 @@ body {
         background-color: #e4e2e2;
 
     }
+
+
+    .chamber>.wrapper>.card__container>.card {
+        width: 48%;
+        /* Adjust width for 2 cards per row */
+    }
+
+    .footer__container>.about__company {
+        width: 100%;
+    }
+
+    .footer__container>.social__links {
+        width: 48%;
+    }
+
+    .footer__container>.company__info {
+        width: 48%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
 
 
 
