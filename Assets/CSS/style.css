@@ -75,7 +75,6 @@ body {
     z-index: 999;
     display: none;
     transition: 0.5s ease-in-out;
-
 }
 
 .navagation>.nav__list>ul>li>.dropdown>li {
@@ -97,6 +96,18 @@ body {
     transition: 0.5s ease-in-out;
     background-color: #e4e2e2;
 
+}
+
+.navagation>.hamburger {
+    cursor: pointer;
+    display: none;
+}
+
+.navagation>.hamburger>div {
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    background: #333333;
 }
 
 /* NAVAGATION CSS ENDS HERE */
@@ -739,9 +750,66 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    .navagation>.nav__list {
-        display: none;
+    .navagation>.hamburger {
+        display: block;
     }
+
+    .navagation>.nav__list {
+        position: absolute;
+        left: -100%;
+        top: 130px;
+        width: 65%;
+        height: fit-content;
+        background: #fff;
+        padding: 30px;
+        transition: 0.3s;
+        z-index: 1;
+    }
+
+    .navagation #nav_check:checked ~ nav{
+        left: 0;
+    }
+
+    .navagation>.nav__list>ul {
+        display: block;
+        width: 90%;
+    }
+
+    .navagation>.nav__list>ul>li {
+        padding-bottom: 20px;
+    }
+
+    .navagation>.nav__list>ul:nth-last-child(1)>li>.dropdown {
+        box-shadow: 5px 5px 10px #d6d4d4, -5px -5px 10px #d6d4d4;
+        left: 24vh;
+        top: 6vh;
+        width: calc(100% - 130px);
+    }
+
+    .navagation>.nav__list>ul>li>.dropdown>li {
+        display: block;
+        padding: 10px 10px 10px 15px;
+    }
+
+    .navagation>.nav__list>ul>li>.dropdown>li>a {
+        color: #8d8d8d;
+        font-weight: bold;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .navagation>.nav__list>ul>li:hover>.dropdown {
+        display: block;
+    }
+
+    .navagation>.nav__list>ul>li>.dropdown>li:hover {
+        transition: 0.5s ease-in-out;
+        background-color: #e4e2e2;
+
+    }
+
+
+
+
 
     .wrapper>.news__container>.news__card {
         flex-direction: column;
@@ -764,6 +832,7 @@ body {
     .wrapper>.news__container>.news__card>.news__card__body {
         padding: 15px;
     }
+
 
 
     /*  */
@@ -849,6 +918,12 @@ body {
 }
 
 @media (max-width: 480px) {
+
+    .navagation>.nav__list {
+        width: 100%;
+    }
+
+
     .slider__container {
         height: auto;
         /* Let the container height adjust automatically */
