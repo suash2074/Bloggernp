@@ -169,10 +169,16 @@ body {
     padding: clamp(4px, 1vw, 6px) clamp(8px, 2vw, 10px);
 }
 
-.blog__preview>.preview__details>.preview__title,
+.blog__preview>.preview__details>a>.preview__title,
 .news__slider__title {
     width: clamp(80%, 90vw, 100%);
     font-size: clamp(2rem, 5vw, 3rem);
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+.blog__preview>.preview__details>a:hover>.preview__title{
+    color: #bcbbbb;
 }
 
 .blog__preview>.preview__details>.preview__description {
@@ -247,17 +253,23 @@ body {
 }
 
 .wrapper>.news__container>.news__card>.news__image {
-    /* padding: 10px 20px 10px 10px; */
     flex: 0 0 auto;
     padding: 10px 20px 10px 10px;
+    overflow: hidden;
+    border-radius: 5px;
     width: 300px;
 }
 
-.wrapper>.news__container>.news__card>.news__image>img {
+.wrapper>.news__container>.news__card>.news__image>a>img {
     width: 100%;
     height: 12rem;
     border-radius: 3px;
     object-fit: cover;
+    transition: 0.5s ease-in-out;
+}
+
+.wrapper>.news__container>.news__card>.news__image>a:hover>img {
+    scale: 1.2;
 }
 
 .wrapper>.news__container>.news__card>.news__card__body {
@@ -325,7 +337,7 @@ body {
 
 }
 
-.category__container>.advertisement__section1>img {
+.category__container>.category__advertisement__section>img {
     width: 100%;
     height: 20rem;
     padding: 10px 10px 5px 10px;
@@ -413,10 +425,14 @@ body {
     color: #828282;
 }
 
-.slider__container>.swiper-wrapper>.news__slider>.news__slider__details>.news__slider__title {
+.slider__container>.swiper-wrapper>.news__slider>.news__slider__details>a>.news__slider__title {
     margin: 30px 0px;
     font-size: clamp(1.5rem, 2.5vw, 3rem);
+    color: #000;
+}
 
+.slider__container>.swiper-wrapper>.news__slider>.news__slider__details>a:hover>.news__slider__title {
+    color: #555454;
 }
 
 .slider__container>.swiper-wrapper>.news__slider>.news__slider__details>.news__slider__description {
@@ -471,12 +487,26 @@ body {
     margin-bottom: 20px;
 }
 
-.chamber>.wrapper>.card__container>.card>.card__image>img {
+.chamber>.wrapper>.card__container>.card>.card__image {
+    width: 100%;
+    height: 12rem;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border-radius: 5px;
+
+}
+
+.chamber>.wrapper>.card__container>.card>.card__image>a>img {
     width: 100%;
     height: 12rem;
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 10px;
+    transition: 0.5s ease-in-out;
+}
+
+.chamber>.wrapper>.card__container>.card>.card__image>a:hover>img {
+    scale: 1.2;
 }
 
 .chamber>.wrapper>.card__container>.card>.card__body {
@@ -811,10 +841,6 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-
-
-
-
 
     .wrapper>.news__container>.news__card {
         flex-direction: column;
