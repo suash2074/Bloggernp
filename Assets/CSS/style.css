@@ -807,8 +807,17 @@ body {
     margin: 10px 0;
 }
 
+.blog__details__container>.blog__details>.user__profile>p{
+    color: #777777;
+}
+
+.blog__details__container>.blog__details>.user__profile>p>.user__name{
+    font-weight: bold;
+    color: #000;
+}
+
 .counter {
-    width: 80%;
+    width: 85%;
     display: flex;
     justify-content: space-between;
 }
@@ -860,7 +869,49 @@ body {
     color: #000;
 }
 
+.blog__details>.blog__description{
+    width: 80%;
+    margin: auto;
+    text-align: justify;
+    line-height: 1.6;
+    color: #777777;
+}
 
+.blog__details>.quote{
+    position: relative;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    height: fit-content;
+    padding: 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #ffffff70;
+    box-shadow: 5px 5px 10px #dfdcdc9e, -5px -5px 10px #dfdcdc9e;
+    overflow: hidden;
+}
+
+.blog__details>.quote>img{
+    position: absolute;
+    /* bottom: -5; */
+    right: -50px;
+    width: 150px;
+}
+
+.blog__details>.quote>.user__profile{
+    font-size: 1rem;
+    color: #777777;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.blog__details>.quote>.user__profile>p{
+    font-style: italic;
+}
+
+.blog__details>.quote>.user__profile>p>.user__name{
+    color: #EC1D23;
+}
 
 @media (max-width: 1200px) {
     .chamber>.wrapper>.card__container>.card {
