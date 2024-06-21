@@ -162,7 +162,8 @@ body {
 
 }
 
-.blog__preview>.preview__details>.upload__date {
+.blog__preview>.preview__details>.upload__date,
+.upload__date {
     width: 150px;
     height: fit-content;
     color: #c0bfbf;
@@ -177,7 +178,7 @@ body {
     transition: 0.3s ease-in-out;
 }
 
-.blog__preview>.preview__details>a:hover>.preview__title{
+.blog__preview>.preview__details>a:hover>.preview__title {
     color: #bcbbbb;
 }
 
@@ -751,6 +752,114 @@ body {
 }
 
 /* FOOTER SECTION CSS ENDS HERE */
+
+
+/* ----------------BLOG DETAILS PAGE CSS FROM HERE---------------------- */
+/*  */
+.blog__details__container {
+    width: 100%;
+    height: fit-content;
+    background-color: #f4f2f2;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    transition: 1s ease-in-out;
+}
+
+.blog__details__container>.blog__image> {
+    width: 100%;
+}
+
+.blog__details__container>.blog__image>img {
+    position: absolute;
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+}
+
+.blog__details__container>.blog__details {
+    width: 95%;
+    height: fit-content;
+    background-color: #fff;
+    margin: auto;
+    margin-top: 350px;
+    margin-bottom: 20px;
+    padding: 40px;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blog__details__container>.blog__details>.category {
+    background-color: #FFE7E9;
+}
+
+.blog__details__container>.blog__details>.upload__date {
+    width: 20%;
+    color: #777777;
+    margin-left: 20px;
+}
+
+.blog__details__container>.blog__details>.blog__title {
+    width: 100%;
+    font-size: clamp(3.5rem, 8vh, 4rem);
+    padding-right: 250px;
+    margin: 10px 0;
+}
+
+.counter {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.counter>.stats__container {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+.counter>.stats__container>hr {
+    height: 20px;
+}
+
+.counter>.stats__container>.stats {
+    display: flex;
+    padding: 10px;
+    color: #777777;
+    align-items: center;
+}
+
+.counter>.social__media {
+    display: flex;
+    align-items: center;
+}
+
+.counter>.social__media>.social__card {
+    margin: 15px 15px 15px 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.counter>.social__media>.social__card>.social__image>img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.counter>.social__media>.social__card>.share {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    color: #777777;
+}
+
+.counter>.social__media>.social__card>.share>span {
+    font-weight: bold;
+    color: #000;
+}
+
 
 
 @media (max-width: 1200px) {
