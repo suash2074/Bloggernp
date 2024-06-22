@@ -930,7 +930,6 @@ body {
     flex-wrap: wrap;
     transition: 1s ease-in-out;
     color: #777777;
-
 }
 
 .blog__details__container>.blog__image> {
@@ -949,9 +948,12 @@ body {
     height: fit-content;
     background-color: #fff;
     margin: auto;
-    margin-top: 350px;
-    margin-bottom: 20px;
-    padding: 40px;
+    margin-top: clamp(200px, 25vw, 350px);
+    /* Adjusted using clamp */
+    margin-bottom: clamp(10px, 2vw, 20px);
+    /* Adjusted using clamp */
+    padding: clamp(20px, 5vw, 40px);
+    /* Adjusted using clamp */
     z-index: 1;
     display: flex;
     flex-wrap: wrap;
@@ -962,15 +964,18 @@ body {
 }
 
 .blog__details__container>.blog__details>.upload__date {
-    width: 20%;
+    width: 50%;
     margin-left: 20px;
 }
 
 .blog__details__container>.blog__details>.blog__title {
     width: 100%;
-    font-size: clamp(3.5rem, 8vh, 4rem);
-    padding-right: 250px;
-    margin: 10px 0;
+    font-size: clamp(2rem, 8vw, 4rem);
+    /* Adjusted using clamp */
+    padding-right: clamp(50px, 10vw, 250px);
+    /* Adjusted using clamp */
+    margin: clamp(5px, 1vw, 10px) 0;
+    /* Adjusted using clamp */
     color: #000;
 }
 
@@ -980,24 +985,32 @@ body {
 }
 
 .counter {
-    width: 85%;
+    width: clamp(70%, 85%, 100%);
+    /* Adjusted using clamp */
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .counter>.stats__container {
     display: flex;
-    padding: 10px;
+    padding: clamp(5px, 2vw, 10px);
     align-items: center;
+    flex: 1;
+    /* Allows the container to take up available space */
+    min-width: 200px;
+    /* Ensures a minimum width for the container */
 }
 
 .counter>.stats__container>hr {
-    height: 20px;
+    /* height: 20px; */
+    height: clamp(10px, 2vw, 20px);
 }
 
 .counter>.stats__container>.stats {
     display: flex;
-    padding: 10px;
+    /* padding: 10px; */
+    padding: clamp(5px, 2vw, 10px);
     color: #777777;
     align-items: center;
 }
@@ -1008,22 +1021,26 @@ body {
 }
 
 .counter>.social__media>.social__card {
-    margin: 15px 15px 15px 0;
-    padding: 10px;
+    margin: 10px 15px 10px 0;
+    padding: clamp(5px, 2vw, 10px);
+    /* Adjusted using clamp */
     display: flex;
     align-items: center;
 }
 
 .counter>.social__media>.social__card>.social__image>img {
-    width: 35px;
-    height: 35px;
+    width: clamp(20px, 5vw, 35px);
+    /* Adjusted using clamp */
+    height: clamp(20px, 5vw, 35px);
+    /* Adjusted using clamp */
     object-fit: contain;
 }
 
 .counter>.social__media>.social__card>.share {
     display: flex;
     flex-direction: column;
-    padding-left: 10px;
+    padding-left: clamp(5px, 2vw, 10px);
+    /* Adjusted using clamp */
 }
 
 .counter>.social__media>.social__card>.share>span {
@@ -1139,11 +1156,12 @@ body {
 }
 
 .blog__details>.new__page {
-    width: 90%;
+    width: clamp(80%, 90%, 100%);
+    /* Adjusted using clamp */
     margin: auto;
-    padding: 20px 0;
+    padding: clamp(10px, 2vw, 20px) 0;
+    /* Adjusted using clamp */
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: space-between;
     border-bottom: 2px solid #f4f2f2;
 }
@@ -1153,25 +1171,38 @@ body {
     flex-wrap: wrap;
     border: none;
     cursor: pointer;
+    width: clamp(140px, 20%, 175px);
+    /* Adjusted using clamp */
+    height: clamp(40px, 5vh, 50px);
+    /* Adjusted using clamp */
+    background-color: #fff;
 }
 
 .blog__details>.new__page>.previous__page,
 .blog__details>.new__page>.next__page {
-    width: 175px;
-    height: 50px;
+
+    width: clamp(140px, 20%, 175px);
+    /* Adjusted using clamp */
+    height: clamp(40px, 5vh, 50px);
+    /* Adjusted using clamp */
     background-color: #fff;
+    display: flex;
+    align-items: center;
+    /* Center content vertically */
+    justify-content: center;
+    /* Center content horizontally */
 }
 
 .blog__details>.new__page>.previous__page>span,
 .blog__details>.new__page>.next__page>span {
-    /* width: 30px;*/
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 1.1rem, 1.2rem);
     justify-self: start;
 }
 
 .blog__details>.new__page>.next__page {
-    width: 160px;
+    width: clamp(140px, 18%, 160px);
+    /* Adjusted using clamp */
 }
 
 .blog__details>.blog__tags>li {
