@@ -1,7 +1,6 @@
 * {
     padding: 0;
     margin: 0;
-    /* background-color: #ffffff; */
     box-sizing: border-box;
     text-decoration: none;
     /* list-style: none; */
@@ -11,6 +10,171 @@
 body {
     background-color: #f4f2f2;
 }
+
+/* PRELOADER */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 9999999999;
+}
+
+.spinner {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    -webkit-animation: rotatee 2.0s infinite linear;
+    animation: rotatee 2.0s infinite linear;
+}
+
+.cube {
+    background-color: #e44a4a;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    -webkit-animation: cubemove 4s infinite ease-in-out;
+    -moz-animation: cubemove 4s infinite ease-in-out;
+    -o-animation: cubemove 4s infinite ease-in-out;
+    animation: cubemove 4s infinite;
+}
+
+@keyframes cubemove {
+    35% {
+        -webkit-transform: scale(0.005);
+    }
+
+    50% {
+        -webkit-transform: scale(1.7);
+    }
+
+    65% {
+        -webkit-transform: scale(0.005);
+    }
+}
+
+.cube1 {
+    left: 14px;
+    top: 0px;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.1s;
+}
+
+.cube2 {
+    left: 28px;
+    top: 0px;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.2s;
+}
+
+.cube3 {
+    left: 42px;
+    top: 0px;
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.3s;
+}
+
+.cube4 {
+    left: 0px;
+    top: 14px;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.1s;
+}
+
+.cube5 {
+    left: 14px;
+    top: 14px;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.2s;
+}
+
+.cube6 {
+    left: 28px;
+    top: 14px;
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.3s;
+}
+
+.cube7 {
+    left: 42px;
+    top: 14px;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.4s;
+}
+
+.cube8 {
+    left: 0px;
+    top: 28px;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.2s;
+}
+
+.cube9 {
+    left: 14px;
+    top: 28px;
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.3s;
+}
+
+.cube10 {
+    left: 28px;
+    top: 28px;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.4s;
+}
+
+.cube11 {
+    left: 42px;
+    top: 28px;
+    -webkit-animation-delay: 1s;
+    animation-delay: 0.5s;
+}
+
+.cube12 {
+    left: 0px;
+    top: 42px;
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.3s;
+}
+
+.cube13 {
+    left: 14px;
+    top: 42px;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.4s;
+}
+
+.cube14 {
+    left: 28px;
+    top: 42px;
+    -webkit-animation-delay: 1s;
+    animation-delay: 0.5s;
+}
+
+.cube15 {
+    left: 42px;
+    top: 42px;
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 0.6s;
+}
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin: -20px 0 0 -20px;
+}
+
+/* PRELOADER ENDS*/
+
 
 /* NAVAGATION CSS STARTS HERE */
 
@@ -27,7 +191,7 @@ body {
     justify-content: center;
 }
 
-.navagation>.logo>img {
+.navagation>.logo>a>img {
     width: 250px;
     height: 98px;
     object-fit: cover;
@@ -954,7 +1118,7 @@ body {
 }
 
 .blog__details>.advertisement__section1>img {
-   height: 32vh;
+    height: 32vh;
 }
 
 .blog__details>.advertisement__section1>.blog__adv__title {
@@ -963,8 +1127,8 @@ body {
     margin-top: 0;
 }
 
-.blog__details>.blog__tags{
-    width: 80%;
+.blog__details>.blog__tags {
+    width: 90%;
     margin: auto;
     padding: 20px 0;
     display: flex;
@@ -974,7 +1138,41 @@ body {
     border-bottom: 2px solid #f4f2f2;
 }
 
+.blog__details>.new__page {
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    border-bottom: 2px solid #f4f2f2;
+}
 
+.blog__details>.new__page>button {
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+    cursor: pointer;
+}
+
+.blog__details>.new__page>.previous__page,
+.blog__details>.new__page>.next__page {
+    width: 175px;
+    height: 50px;
+    background-color: #fff;
+}
+
+.blog__details>.new__page>.previous__page>span,
+.blog__details>.new__page>.next__page>span {
+    /* width: 30px;*/
+    font-weight: bold;
+    font-size: 1.1rem;
+    justify-self: start;
+}
+
+.blog__details>.new__page>.next__page {
+    width: 160px;
+}
 
 .blog__details>.blog__tags>li {
     margin: 10px;
@@ -1007,6 +1205,7 @@ body {
     margin: 10px;
     overflow: hidden;
 }
+
 .favourite__category>.category__list>figure>a>img {
     width: 100px;
     height: 100px;

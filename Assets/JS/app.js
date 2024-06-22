@@ -13,7 +13,7 @@ function validateEmail() {
 
   if (!emailField.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
     emailError.innerHTML = "Please enter a valid email";
-  emailField.style.backgroundColor = "#d4a270a2";
+    emailField.style.backgroundColor = "#d4a270a2";
     return false;
   }
 
@@ -21,4 +21,15 @@ function validateEmail() {
   emailField.style.backgroundColor = "#81d470a2";
   return true;
 }
+
+/* -------------------
+    Preloader
+    ---------------------*/
+(function ($) {
+  $(window).load(function () {
+    // Preloader 
+    $('#loader').fadeOut('slow');
+    $('.spinner').fadeOut('slow');
+  }); // End Window Load
+})(jQuery, window, document);
 

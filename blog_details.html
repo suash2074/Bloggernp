@@ -18,10 +18,35 @@
 </head>
 
 <body>
+  <!-- Start Preloader -->
+  <div id="loader">
+    <div class="spinner">
+      <div class="cube cube0"></div>
+      <div class="cube cube1"></div>
+      <div class="cube cube2"></div>
+      <div class="cube cube3"></div>
+      <div class="cube cube4"></div>
+      <div class="cube cube5"></div>
+      <div class="cube cube6"></div>
+      <div class="cube cube7"></div>
+      <div class="cube cube8"></div>
+      <div class="cube cube9"></div>
+      <div class="cube cube10"></div>
+      <div class="cube cube11"></div>
+      <div class="cube cube12"></div>
+      <div class="cube cube13"></div>
+      <div class="cube cube14"></div>
+      <div class="cube cube15"></div>
+    </div>
+  </div>
+  <!-- End Preloader -->
+
   <!-- Header includes logo and navagation links -->
   <header class="navagation">
     <figure class="logo">
-      <img src="Assets/Images/blogernpLogo.png" alt="logo" />
+      <a href="index.html">
+        <img src="Assets/Images/blogernpLogo.png" alt="logo" />
+      </a>
     </figure>
 
     <hr />
@@ -257,7 +282,11 @@
         <li class="tag__name">UX</li>
       </div>
 
-     
+      <div class="new__page">
+        <button class="previous__page">Prev Post <span>Tips on Minimalist</span></button>
+        <button class="next__page">Next Post <span>Less is more</span></button>
+      </div>
+    </section>
 
     <section class="favourite__category">
       <h3 class="card__headline">Favourite Category</h3>
@@ -495,7 +524,9 @@
   </footer>
   <!-- Swiper JS CDN-->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+  
+  
+  <script src="Assets/JS/jquery.min.js"></script>
   <script src="Assets/JS/app.js"></script>
 </body>
 
