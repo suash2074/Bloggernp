@@ -1448,6 +1448,15 @@ body {
     .footer__container>.company__info {
         width: 100%;
     }
+
+    /* Blog details page */
+    .blog__details>.blog__description,
+    .blog__details>.quote,
+    .blog__details>.key__points,
+    .blog__details>.sub__blog__title {
+        width: 95%;
+    }
+
 }
 
 @media (max-width: 480px) {
