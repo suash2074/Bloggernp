@@ -1318,6 +1318,7 @@ body {
 
     .navagation #nav_check:checked~nav {
         left: 0;
+        box-shadow: 0 5px 5px #ebe9e9;
     }
 
     .navagation>.nav__list>ul {
