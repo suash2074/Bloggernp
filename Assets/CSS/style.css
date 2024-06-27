@@ -1083,6 +1083,7 @@ body {
     box-shadow: 5px 5px 10px #dfe2e2, -5px -5px 10px #f4f2f2;
     color: #000;
     text-decoration: none;
+    border-radius: 5px;
 
 }
 
@@ -1298,7 +1299,8 @@ body {
     width: 90%;
     height: fit-content;
     margin: auto;
-    padding: 40px 30px;
+    /* padding: 40px 30px; */
+    padding: clamp(20px, 5vw, 40px) clamp(15px, 3vw, 30px);
     background-color: #fff;
     display: flex;
     flex-wrap: wrap;
@@ -1307,10 +1309,10 @@ body {
 }
 
 .sub__container>.sub__card {
-    width: 30%;
+    flex: 1 1 300px;
     height: fit-content;
     padding: 20px;
-    margin-bottom: 30px;
+    margin: 15px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -1321,7 +1323,9 @@ body {
 
 .sub__container>.sub__card>.package__type {
     width: 100%;
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
+    font-size: clamp(1rem, 1.1rem, 1.2rem);
+
     display: flex;
     align-items: center;
     font-weight: bold;
@@ -1340,7 +1344,6 @@ body {
 .sub__container>.sub__card>.package__price {
     font-size: 2.5rem;
     font-weight: bold;
-    border-bottom: 1px solid #c6c5c5;
 }
 
 .sub__container>.sub__card>.package__offers__list {
@@ -1570,6 +1573,11 @@ body {
     .blog__details>.key__points,
     .blog__details>.sub__blog__title {
         width: 95%;
+    }
+
+    /* RESIZE OF SUBSCRIBTION CARD CONTAINER     */
+    .sub__container {
+        width: 100%;
     }
 
 }
