@@ -1295,19 +1295,19 @@ body {
 
 /* SUBSCRIPTION CSS */
 
-.page__title{
+.page__title {
     width: 85%;
     margin: 30px auto;
     margin-bottom: 0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.page__title>h1{
-    font-size: clamp( 1.5rem, 2vw, 2.5rem);
+.page__title>h1 {
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
     margin-bottom: 20px;
 }
 
-.page__title>p{
+.page__title>p {
     width: 30%;
     font-size: 1rem;
     /* margin-bottom: 20px; */
@@ -1329,6 +1329,7 @@ body {
 }
 
 .sub__container>.sub__card {
+    position: relative;
     flex: 1 1 300px;
     height: fit-content;
     padding: 20px;
@@ -1339,6 +1340,7 @@ body {
     border-radius: 8px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     box-shadow: 5px 5px 10px #f4f2f2, -5px -5px 10px #f4f2f2;
+    overflow: hidden;
 }
 
 .sub__container>.sub__card>.package__type {
@@ -1354,11 +1356,75 @@ body {
 .sub__container>.sub__card>.package__type>.circle {
     width: 15px;
     height: 15px;
-    background-color: #e44a4aa7;
     backdrop-filter: blur(10px);
-    box-shadow: 1px 1px 10px #e44a4a, -1px -1px 10px #e44a4a;
     border-radius: 50%;
     margin-right: 10px;
+}
+
+.circle__red {
+    background-color: #e44a4aa7;
+    box-shadow: 1px 1px 10px #e44a4a, -1px -1px 10px #e44a4a;
+}
+
+.text__red {
+    color: #e44a4a;
+}
+
+.circle__purple {
+    background-color: #7c40eca7;
+    box-shadow: 1px 1px 10px #804ae4, -1px -1px 10px #804ae4;
+    color: #804ae4;
+}
+
+.text__purple {
+    color: #804ae4;
+}
+
+.circle__blue {
+    background-color: #409ceca7;
+    box-shadow: 1px 1px 10px #409cec, -1px -1px 10px #409cec;
+    color: #409cec;
+}
+
+.text__blue {
+    color: #409cec;
+}
+
+.background__box__start{
+    position: absolute;
+    top: clamp(-120px, -102px, -80px); /* Min value, preferred value, max value */
+    left: clamp(220px, 253px, 300px);
+    width: 229px;
+    height: 229px;
+    border-radius: 30% 70% 39% 61% / 65% 35% 65% 35% ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.background__box__last{
+    position: absolute;
+    bottom: clamp(-150px, -132px, -100px); /* Min value, preferred value, max value */
+    right: clamp(200px, 237px, 300px); 
+    transform: rotate(172deg);
+    width: 200px;
+    height: 200px;
+    border-radius: 30% 70% 39% 61% / 65% 35% 65% 35% ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.background__box__color1{
+    background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+
+}
+
+.background__box__color2{
+    background: linear-gradient(to right, #77A1D3, #79CBCA);
+
+}
+
+.background__box__color3{
+    background: linear-gradient(to right, #cc2b5e, #753a88);
 }
 
 .sub__container>.sub__card>.package__price {
