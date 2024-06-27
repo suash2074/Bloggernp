@@ -1303,15 +1303,18 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .sub__container>.sub__card {
     width: 30%;
     height: fit-content;
     padding: 20px;
+    margin-bottom: 30px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    border-radius: 8px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     box-shadow: 5px 5px 10px #f4f2f2, -5px -5px 10px #f4f2f2;
 }
@@ -1340,42 +1343,31 @@ body {
     border-bottom: 1px solid #c6c5c5;
 }
 
-.sub__container>.sub__card>.package__offers__list{
+.sub__container>.sub__card>.package__offers__list {
     width: 100%;
     padding: 40px 0 40px 15px;
     line-height: 2;
     font-size: 1rem;
 }
 
-.sub__container>.sub__card>.package__sub__btn{
+.sub__container>.sub__card>.package__sub__btn {
     position: relative;
     width: 50%;
     padding: 20px;
     margin: auto;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #e44a4a;
+    color: #e44a4a;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.sub__container>.best__plan>.package__sub__btn {
     background-color: #e44a4a;
-    border-radius: 10px;
-    border: 0;
     color: white !important;
-    font-weight: bold;
-    z-index: 2;
-}
-
-.sub__container>.sub__card>.package__sub__btn::after{
-    content: " ";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 172px;
-    height: 16px;
-    padding: 20px;
-    /* margin: auto; */
-    background-color: #c5b3b3;
-    border-radius: 10px;
     border: 0;
-    color: white !important;
-    font-weight: bold;
 }
-
 
 @media (max-width: 1200px) {
     .chamber>.wrapper>.card__container>.card {
