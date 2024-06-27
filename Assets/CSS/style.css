@@ -1060,7 +1060,7 @@ body {
 .blog__details>.summary__premium::after {
     content: " ";
     position: absolute;
-    background: linear-gradient(to top,#ffffffa8, transparent);
+    background: linear-gradient(to top, #ffffffa8, transparent);
     width: 100%;
     height: 100%;
     margin: auto;
@@ -1078,6 +1078,7 @@ body {
     font-size: 1.1rem;
     transition: 0.3s ease-in-out;
 }
+
 .blog__details>a>.subscription__btn:hover {
     box-shadow: 5px 5px 10px #dfe2e2, -5px -5px 10px #f4f2f2;
     color: #000;
@@ -1289,6 +1290,90 @@ body {
 
 .favourite__category>.category__list>figure>a:hover>img {
     scale: 2;
+}
+
+/* SUBSCRIPTION CSS */
+
+.sub__container {
+    width: 90%;
+    height: fit-content;
+    margin: auto;
+    padding: 40px 30px;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.sub__container>.sub__card {
+    width: 30%;
+    height: fit-content;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-shadow: 5px 5px 10px #f4f2f2, -5px -5px 10px #f4f2f2;
+}
+
+.sub__container>.sub__card>.package__type {
+    width: 100%;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.sub__container>.sub__card>.package__type>.circle {
+    width: 15px;
+    height: 15px;
+    background-color: #e44a4aa7;
+    backdrop-filter: blur(10px);
+    box-shadow: 1px 1px 10px #e44a4a, -1px -1px 10px #e44a4a;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.sub__container>.sub__card>.package__price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    border-bottom: 1px solid #c6c5c5;
+}
+
+.sub__container>.sub__card>.package__offers__list{
+    width: 100%;
+    padding: 40px 0 40px 15px;
+    line-height: 2;
+    font-size: 1rem;
+}
+
+.sub__container>.sub__card>.package__sub__btn{
+    position: relative;
+    width: 50%;
+    padding: 20px;
+    margin: auto;
+    background-color: #e44a4a;
+    border-radius: 10px;
+    border: 0;
+    color: white !important;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.sub__container>.sub__card>.package__sub__btn::after{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 172px;
+    height: 16px;
+    padding: 20px;
+    /* margin: auto; */
+    background-color: #c5b3b3;
+    border-radius: 10px;
+    border: 0;
+    color: white !important;
+    font-weight: bold;
 }
 
 
