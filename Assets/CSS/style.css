@@ -1295,6 +1295,26 @@ body {
 
 /* SUBSCRIPTION CSS */
 
+.page__title{
+    width: 85%;
+    margin: 30px auto;
+    margin-bottom: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.page__title>h1{
+    font-size: clamp( 1.5rem, 2vw, 2.5rem);
+    margin-bottom: 20px;
+}
+
+.page__title>p{
+    width: 30%;
+    font-size: 1rem;
+    /* margin-bottom: 20px; */
+    color: #8d8d8d;
+    line-height: 1.5;
+}
+
 .sub__container {
     width: 90%;
     height: fit-content;
@@ -1352,6 +1372,13 @@ body {
     line-height: 2;
     font-size: 1rem;
 }
+
+.sub__container>.sub__card>.package__offers__list>.package__offers {
+    list-style-image: url(../Images/sparkling.png);
+    align-items: center;
+    align-self: center;
+}
+
 
 .sub__container>.sub__card>.package__sub__btn {
     position: relative;
