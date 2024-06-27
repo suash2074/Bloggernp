@@ -1457,6 +1457,7 @@ body {
     color: #e44a4a;
     font-weight: bold;
     z-index: 10;
+    cursor: pointer;
 }
 
 .sub__container>.best__plan>.package__sub__btn {
