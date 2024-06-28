@@ -1413,17 +1413,17 @@ body {
     background-repeat: no-repeat;
 }
 
-.background__box__color1{
+.background__box__colorRed{
     background: linear-gradient(to right, #ff6e7f, #bfe9ff);
 
 }
 
-.background__box__color2{
+.background__box__colorBlue{
     background: linear-gradient(to right, #77A1D3, #79CBCA);
 
 }
 
-.background__box__color3{
+.background__box__colorPurple{
     background: linear-gradient(to right, #cc2b5e, #753a88);
 }
 
