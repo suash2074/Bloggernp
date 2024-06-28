@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -279,13 +281,15 @@ body {
 
 /* BLOG PREVIEW CSS STARTS HERE */
 
-.blog__preview {
+.blog__preview,
+.about__container {
     position: relative;
     width: 100%;
     height: 32rem;
 }
 
-.blog__preview>.preview__image>img {
+.blog__preview>.preview__image>img,
+.preview__image>img {
     position: absolute;
     top: 0;
     width: 100%;
@@ -293,7 +297,6 @@ body {
     object-fit: cover;
     z-index: -1;
 }
-
 
 /* Making the preview image darker to make the text more visible. */
 .preview__image::before {
@@ -1390,40 +1393,42 @@ body {
     color: #409cec;
 }
 
-.background__box__start{
+.background__box__start {
     position: absolute;
-    top: clamp(-120px, -102px, -80px); /* Min value, preferred value, max value */
+    top: clamp(-120px, -102px, -80px);
+    /* Min value, preferred value, max value */
     left: clamp(220px, 253px, 300px);
     width: 229px;
     height: 229px;
-    border-radius: 30% 70% 39% 61% / 65% 35% 65% 35% ;
+    border-radius: 30% 70% 39% 61% / 65% 35% 65% 35%;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.background__box__last{
+.background__box__last {
     position: absolute;
-    bottom: clamp(-150px, -132px, -100px); /* Min value, preferred value, max value */
-    right: clamp(200px, 237px, 300px); 
+    bottom: clamp(-150px, -132px, -100px);
+    /* Min value, preferred value, max value */
+    right: clamp(200px, 237px, 300px);
     transform: rotate(172deg);
     width: 200px;
     height: 200px;
-    border-radius: 30% 70% 39% 61% / 65% 35% 65% 35% ;
+    border-radius: 30% 70% 39% 61% / 65% 35% 65% 35%;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.background__box__colorRed{
+.background__box__colorRed {
     background: linear-gradient(to right, #ff6e7f, #bfe9ff);
 
 }
 
-.background__box__colorBlue{
+.background__box__colorBlue {
     background: linear-gradient(to right, #77A1D3, #79CBCA);
 
 }
 
-.background__box__colorPurple{
+.background__box__colorPurple {
     background: linear-gradient(to right, #cc2b5e, #753a88);
 }
 
@@ -1465,6 +1470,52 @@ body {
     color: white !important;
     border: 0;
 }
+
+
+/* ABOUT US CSS */
+
+.about__container>.preview__image::before {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    z-index: 1;
+}
+
+.about__container>.company__details {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    z-index: 2;
+    position: inherit;
+}
+
+.about__container>.company__details>.company__name {
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.about__container>.company__details>.slogan {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 10px;
+    font-family: "Roboto Condensed", sans-serif
+}
+
+.about__container>.company__details>.explore__btn {
+    font-size: 1.1rem;
+    padding: 15px 50px;
+    background-color: #e44a4a;
+    border: none;
+}
+
+.about__container>.company__details>.explore__btn>a {
+    color: #fff;
+}
+
+/* MMEDIA SCREEN FOR 1200px */
 
 @media (max-width: 1200px) {
     .chamber>.wrapper>.card__container>.card {
