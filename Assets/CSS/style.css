@@ -1473,6 +1473,13 @@ body {
 
 
 /* ABOUT US CSS */
+.about__container {
+    height: 35rem;
+}
+
+.about__container>.preview__image>img{
+    height: 35rem;
+}
 
 .about__container>.preview__image::before {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
@@ -1513,6 +1520,47 @@ body {
 
 .about__container>.company__details>.explore__btn>a {
     color: #fff;
+}
+
+.company__info__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 40px;
+    margin: 40px auto;
+}
+
+.company__info__container>.company__image>img {
+    width: 500px;
+    height: 60vh;
+    border-radius: 44% 56% 67% 33% / 45% 55% 45% 55%;
+    object-fit: cover;
+}
+
+.company__info__container>.company__information {
+    width: 40%;
+    text-align: justify;
+}
+
+.company__info__container>.company__information>.company__name {
+    font-size: 2rem;
+}
+
+.company__info__container>.company__information>.description {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.company__info__container>.team__members{
+    display: flex;
+    /* width: 50%; */
+    height: fit-content;
+}
+
+.company__info__container>.team__members>.members__bio>img{
+    width: 100px;
+    height: 60vh;
 }
 
 /* MMEDIA SCREEN FOR 1200px */
