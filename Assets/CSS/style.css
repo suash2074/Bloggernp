@@ -366,6 +366,7 @@ body {
     width: clamp(30px, 5vw, 40px);
     height: clamp(30px, 5vw, 40px);
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .blog__preview>.preview__details>.user__profile>p,
@@ -1247,6 +1248,60 @@ body {
     /* Adjusted using clamp */
 }
 
+
+/* COMMENT SECTION CSS */
+.blog__details>.comment__container {
+    width: 90%;
+    margin: auto;
+}
+
+.blog__details>.comment__container>.comment__previews {
+    width: 60%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #b5b4b4 #ffffff00;
+}
+
+.blog__details>.comment__container>.comment__previews>.comment__card {
+    width: 100%;
+    height: fit-content;
+    padding: 40px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 10px #e4e2e2, -5px -5px 10px #e4e2e2;
+}
+
+
+.blog__details>.comment__container>.comment__previews>.comment__card>.comment__head {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.comment__previews>.comment__card>.comment__head>.user__profile>img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.comment__previews>.comment__card>.comment__head>.user__profile>.user__detail>.user__name {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #333333;
+}
+
+.comment__previews>.comment__card>.comment__head>.user__profile>.user__detail>.comment__date {
+    font-size: 0.85rem;
+}
+
+/* TAGS SECTION CSS */
 .blog__details>.blog__tags>li {
     margin: 10px;
     background-color: #f4f2f2;
