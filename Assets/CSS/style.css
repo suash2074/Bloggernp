@@ -1253,6 +1253,7 @@ body {
 .blog__details>.comment__container {
     width: 90%;
     margin: auto;
+    display: flex;
 }
 
 .blog__details>.comment__container>.comment__previews {
@@ -1264,6 +1265,7 @@ body {
     overflow-y: scroll;
     scrollbar-width: thin;
     scrollbar-color: #b5b4b4 #ffffff00;
+    border-bottom: 1px solid #f4f2f2;
 }
 
 .blog__details>.comment__container>.comment__previews>.comment__card {
@@ -1311,7 +1313,7 @@ body {
 
 }
 
-.heart__btn.heart__active{
+.heart__btn.heart__active {
     background-color: #fbd0d8;
 }
 
@@ -1349,19 +1351,59 @@ body {
     font-size: 1.1rem;
 }
 
-/* .number::before {
-    content: "10";
+/* POST COMMENT SECTION */
+
+.comment__post {
+    width: 40%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.comment__post>h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333333;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.comment__post>form {
+    padding-top: 20px;
+
+}
+
+.comment__post>form>.post__description {
+    width: 100%;
+    border: 0;
+    resize: none;
+    margin-top: 20px;
+    padding: 20px;
+    box-shadow: inset 5px 5px 10px #f4f2f2, inset -5px -5px 10px #f4f2f2;
+}
+
+.comment__post>form>.user__profile>.user__name {
+    padding-left: 5px;
     font-weight: bold;
 }
 
-.number.heart__active::before {
-    content: "12";
-    color: #000;
-} */
 
-/* 
-.number.heart__active{
-  } */
+.comment__post>form>.post__description:focus-visible {
+    outline: none;
+    box-shadow: 5px 5px 10px #f4f2f2, -5px -5px 10px #f4f2f2;
+}
+
+.comment__post>form>.post__btn {
+    float: right;
+    margin-top: 20px;
+    padding: 12px 40px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 0;
+    background-color: #e44a4a;
+    color: #fff;
+}
 
 /* TAGS SECTION CSS */
 .blog__details>.blog__tags>li {
@@ -1884,10 +1926,26 @@ body {
         text-align: justify;
     }
 
-    /* ABOUT US RESIZING 992px*/
     .company__team>.team__members>.image__wrapper {
         width: 70%;
         transition: .5s linear;
+    }
+
+    /* COMMENT SECTION RESIZING 992px */
+    .blog__details>.comment__container {
+        flex-wrap: wrap;
+    }
+
+    .blog__details>.comment__container>.comment__previews {
+        width: 100%;
+    }
+
+    .comment__post {
+        width: 100%;
+    }
+
+    .comment__post>h3 {
+        margin-top: 20px;
     }
 }
 
@@ -2011,7 +2069,7 @@ body {
         width: 100%;
     }
 
-    /* RESIZE FO ABOUT US 778p */
+    /* RESIZE FO ABOUT US 768p */
     .company__info__container>.company__image>img {
         width: 300px;
         height: 40vh;
@@ -2021,6 +2079,11 @@ body {
     .company__team>.team__members>.image__wrapper {
         width: 80%;
         transition: .5s linear;
+    }
+
+    /* RESIZING COMMENT SECTION 768 */
+    .blog__details>.comment__container {
+        width: 100%;
     }
 }
 
