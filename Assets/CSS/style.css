@@ -1301,6 +1301,68 @@ body {
     font-size: 0.85rem;
 }
 
+/* HEART BUTTON ANIMATION */
+.heart__btn {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    /* border: 1px solid #cc2b5e; */
+    border-radius: 30px;
+
+}
+
+.heart__btn.heart__active{
+    background-color: #fbd0d8;
+}
+
+.heart {
+    width: 90px;
+    height: 90px;
+    background: url(../Images/heart.png) no-repeat;
+    background-position: left;
+    background-size: 2900%;
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.heart.heart__active {
+    background-position: right;
+    animation: animate .8s steps(28) 1;
+}
+
+@keyframes animate {
+    0% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+}
+
+.number {
+    margin: 10px 20px 10px 50px;
+    font-size: 1.1rem;
+}
+
+/* .number::before {
+    content: "10";
+    font-weight: bold;
+}
+
+.number.heart__active::before {
+    content: "12";
+    color: #000;
+} */
+
+/* 
+.number.heart__active{
+  } */
+
 /* TAGS SECTION CSS */
 .blog__details>.blog__tags>li {
     margin: 10px;
