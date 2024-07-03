@@ -36,21 +36,28 @@ function validateEmail() {
 
 $(document).ready(function () {
   $(".heart__btn").click(function () {
-      let numberElement = $(this).find('.number');
-      let currentNumber = parseInt(numberElement.text());
+    let numberElement = $(this).find('.number');
+    let currentNumber = parseInt(numberElement.text());
 
-      // Check if currentNumber is a valid number
-      if (isNaN(currentNumber)) {
-          currentNumber = 0; // Default to 0 if parsing fails
-      }
+    // Check if currentNumber is a valid number
+    if (isNaN(currentNumber)) {
+      currentNumber = 0; // Default to 0 if parsing fails
+    }
 
-      if ($(this).hasClass("heart__active")) {
-          numberElement.text(currentNumber - 1);
-      } else {
-          numberElement.text(currentNumber + 1);
-      }
+    if ($(this).hasClass("heart__active")) {
+      numberElement.text(currentNumber - 1);
+    } else {
+      numberElement.text(currentNumber + 1);
+    }
 
-      $(this).toggleClass("heart__active");
-      $(this).find('.heart').toggleClass("heart__active");
+    $(this).toggleClass("heart__active");
+    $(this).find('.heart').toggleClass("heart__active");
   });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  var contactUsSection = document.querySelector('.contact__us');
+  var imageUrl = contactUsSection.getAttribute('data-image');
+  console.log("Image URL:", imageUrl);
+  contactUsSection.style.backgroundImage = imageUrl;
 });
