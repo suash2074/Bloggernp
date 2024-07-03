@@ -1809,15 +1809,16 @@ body {
 /* CONTACT US CSS */
 
 .contact__us {
+    position: relative;
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     background-attachment: fixed;
     background-size: cover;
-    position: relative;
 }
 
 .contact__us::after {
@@ -1832,10 +1833,9 @@ body {
 
 
 .contact__us>.contact__info {
-    width: 40%;
+    width: clamp(250px, 40%, 600px);
     height: inherit;
-    padding: 40px 50px;
-    /* margin: auto; */
+    padding: clamp(20px, 5vw, 50px);
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
@@ -1846,22 +1846,23 @@ body {
 
 .contact__info>.contact__title {
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 3vw, 3rem);
     font-weight: bold;
     color: #e44a4a;
-    margin-bottom: 20px;
+    margin-bottom: clamp(10px, 2vw, 20px);
 }
 
 .contact__info>.contact__description {
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
     line-height: 1.4;
 }
 
 .contact__info>.contact__email,
-.contact__phone,
-.contcat__address {
+.contact__info>.contact__phone,
+.contact__info>.contact__address {
     width: 100%;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
     line-height: 1.4;
 }
 
@@ -1871,22 +1872,24 @@ body {
 
 .contact__us>.contact__page {
     position: relative;
-    width: 30%;
+    width: clamp(250px, 30%, 400px);
     background-color: #000000;
     color: #fff;
     padding: 0 0 20px 20px;
     box-shadow: 0 0 10px rgba(114, 114, 114, 0.874);
     z-index: 10;
+    transition: 1s ease-in-out;
+
 }
 
 .contact__us>.contact__page::after {
     content: " ";
     position: absolute;
-    top: -45px;
-    left: 80px;
-    width: 90%;
-    height: 97%;
-    border: 10px solid #fff;
+    top: clamp(-30px, -5vw, -45px);
+    left: clamp(50px, 5vw, 80px);
+    width: clamp(80%, 90%, 90%);
+    height: clamp(80%, 90%, 97%);
+    border: clamp(5px, 1vw, 10px) solid #fff;
     z-index: -1;
 }
 
@@ -1902,58 +1905,62 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #000000;
-    padding-right: 20px;
+    padding-right: clamp(10px, 2vw, 20px);
 
 }
 
 .contact__page>.contact__form>.input__container {
     display: flex;
     justify-content: space-between;
+    gap: clamp(10px, 2vw, 20px);
 }
 
 .contact__page>.contact__form>.input__container>.input__box {
     display: flex;
     flex-direction: column;
-    width: 48%;
-    margin-bottom: 10px;
+    width: clamp(100px, 48%, 300px);
+    margin-bottom: clamp(5px, 1vw, 10px);
 }
 
-.contact__page>.contact__form>.input__container>.input__box>label, .contact__form>label {
-    margin: 10px 0 5px;
+.contact__page>.contact__form>.input__container>.input__box>label,
+.contact__form>label {
+    margin: clamp(5px, 1vw, 10px) 0;
 }
 
-.contact__page>.contact__form>.input__container>.input__box>input{
-    height: 40px;
+.contact__page>.contact__form>.input__container>.input__box>input {
+    height: clamp(30px, 4vw, 40px);
 }
 
 .contact__form>input,
 .contact__form>textarea {
-    padding: 10px;
-    border-radius: 1px; 
+    padding: clamp(5px, 1vw, 10px);
+    border-radius: clamp(1px, 0.5vw, 1px);
     border: none;
 }
-label>.star{
+
+label>.star {
     color: #e44a4a;
 }
+
 .contact__form>input {
-    height: 40px;
-    
+    height: clamp(30px, 4vw, 40px);
+
 }
 
 .contact__form>textarea {
     resize: none;
-    height: 150px;
+    height: clamp(100px, 15vw, 150px);
 }
 
 .contact__form>button {
     background-color: #e44a4a;
     color: #ffffff;
-    padding: 15px;
+    padding: clamp(10px, 1.5vw, 15px);
     border: none;
-    border-radius: 5px; 
-    margin-top: 20px;
+    border-radius: clamp(3px, 0.5vw, 5px);
+    margin-top: clamp(10px, 2vw, 20px);
     cursor: pointer;
-    font-size: 16px;
+    font-size: clamp(14px, 1.5vw, 16px);
 }
 
 
@@ -2234,6 +2241,24 @@ label>.star{
     .blog__details>.comment__container {
         width: 100%;
     }
+
+
+    /* RESIZE CONTACT US 768 */
+    .contact__us {
+        justify-content: center;
+        height: 120vh;
+    }
+
+    .contact__us>.contact__info {
+        width: 90%;
+        height: 30vh;
+        justify-content: center;
+    }
+
+    .contact__us>.contact__page {
+        width: 50%;
+        transition: 1s ease-in-out;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2265,6 +2290,11 @@ label>.star{
     .company__team>.team__members>.image__wrapper {
         width: 100%;
         transition: .5s linear;
+    }
 
+    /* RESIZE CONTACT US 768 */
+    .contact__us>.contact__page {
+        width: 75%;
+        transition: 1s ease-in-out;
     }
 }
