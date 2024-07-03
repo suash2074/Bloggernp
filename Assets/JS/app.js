@@ -33,13 +33,6 @@ function validateEmail() {
   }); // End Window Load
 })(jQuery, window, document);
 
-// $(document).ready(function () {
-//   $(".heart__btn").click(function () {
-//     $(".heart__btn").toggleClass("heart__active")
-//     $('.number').toggleClass("heart__active")
-//     $('.heart').toggleClass("heart__active")
-//   });
-// });
 
 $(document).ready(function () {
   $(".heart__btn").click(function () {
