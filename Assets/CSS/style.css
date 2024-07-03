@@ -1869,73 +1869,91 @@ body {
     color: #e44a4a;
 }
 
-.contact__us>.contact__form {
-    width: 35%;
-    height: fit-content;
-    background-color: #00000096;
-    color: #e44a4a;
-    padding: 20px;
-    /* border-radius: 10px; */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.224);
-    z-index: 1;
+.contact__us>.contact__page {
+    position: relative;
+    width: 30%;
+    background-color: #000000;
+    color: #fff;
+    padding: 0 0 20px 20px;
+    box-shadow: 0 0 10px rgba(114, 114, 114, 0.874);
+    z-index: 10;
 }
 
+.contact__us>.contact__page::after {
+    content: " ";
+    position: absolute;
+    top: -45px;
+    left: 80px;
+    width: 90%;
+    height: 97%;
+    border: 10px solid #fff;
+    z-index: -1;
+}
 
-
-/*  */
-
-.contact__form>h1 {
+.contact__page>h1 {
     text-align: center;
+    background-color: #000000;
+    color: #e44a4a;
     letter-spacing: 2px;
+    padding-top: 20px;
 }
 
-.contact__form>form {
+.contact__page>.contact__form {
     display: flex;
     flex-direction: column;
+    background-color: #000000;
+    padding-right: 20px;
+
 }
 
-.contact__form>form>.input__container {
+.contact__page>.contact__form>.input__container {
     display: flex;
     justify-content: space-between;
 }
 
-.contact__form>form>.input__container>.input__box {
+.contact__page>.contact__form>.input__container>.input__box {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 48%;
+    margin-bottom: 10px;
 }
 
-.contact__form>form>.input__container>.input__box>label {
+.contact__page>.contact__form>.input__container>.input__box>label, .contact__form>label {
     margin: 10px 0 5px;
 }
 
-input, textarea {
-    padding: 10px;
-    border: none;
-}
-
-input {
+.contact__page>.contact__form>.input__container>.input__box>input{
     height: 40px;
 }
 
-textarea {
+.contact__form>input,
+.contact__form>textarea {
+    padding: 10px;
+    border-radius: 1px; 
+    border: none;
+}
+label>.star{
+    color: #e44a4a;
+}
+.contact__form>input {
+    height: 40px;
+    
+}
+
+.contact__form>textarea {
     resize: none;
     height: 150px;
 }
 
-button {
+.contact__form>button {
     background-color: #e44a4a;
-    color: #000;
+    color: #ffffff;
     padding: 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 5px; 
     margin-top: 20px;
     cursor: pointer;
     font-size: 16px;
-}
-
-button:hover {
-    background-color: #00cc00;
 }
 
 
