@@ -378,7 +378,7 @@ body {
 .user__profile {
     display: flex;
     align-items: center;
-    transition-delay: 1000ms;
+    transition-delay: 200ms;
 }
 
 .blog__preview>.preview__details>.user__profile>img,
