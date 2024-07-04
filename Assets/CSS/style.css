@@ -1695,16 +1695,15 @@ body {
 .page__title>p {
     width: 30%;
     font-size: 1rem;
-    /* margin-bottom: 20px; */
-    color: #8d8d8d;
+        color: #8d8d8d;
     line-height: 1.5;
+    transition-delay: 200ms;
 }
 
 .sub__container {
     width: 90%;
     height: fit-content;
     margin: auto;
-    /* padding: 40px 30px; */
     padding: clamp(20px, 5vw, 40px) clamp(15px, 3vw, 30px);
     background-color: #fff;
     display: flex;
@@ -1726,6 +1725,14 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     box-shadow: 5px 5px 10px #f4f2f2, -5px -5px 10px #f4f2f2;
     overflow: hidden;
+}
+
+.sub__container>.sub__card:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.sub__container>.sub__card:nth-child(3) {
+    transition-delay: 400ms;
 }
 
 .sub__container>.sub__card>.package__type {
