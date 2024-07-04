@@ -16,7 +16,7 @@ html {
 .hidden {
     opacity: 0;
     filter: blur(5px);
-    transition: all 1.5s;
+    transition: all 1s;
     transform: translateX(-100%);
 }
 
@@ -343,7 +343,7 @@ body {
     font-weight: bold;
     color: #df2f2f;
     background-color: #dfe2e2;
-
+    transition-delay: 200ms;
 }
 
 .blog__preview>.preview__details>.upload__date,
@@ -352,6 +352,7 @@ body {
     height: fit-content;
     color: #c0bfbf;
     padding: clamp(4px, 1vw, 6px) clamp(8px, 2vw, 10px);
+    transition-delay: 400ms;
 }
 
 .blog__preview>.preview__details>a>.preview__title,
@@ -369,6 +370,7 @@ body {
 .blog__preview>.preview__details>.preview__description {
     width: clamp(70%, 80vw, 90%);
     font-size: clamp(0.8rem, 2.5vw, 1rem);
+    transition-delay: 800ms;
     color: #c0bfbf;
 }
 
@@ -376,6 +378,7 @@ body {
 .user__profile {
     display: flex;
     align-items: center;
+    transition-delay: 1000ms;
 }
 
 .blog__preview>.preview__details>.user__profile>img,
@@ -436,6 +439,22 @@ body {
     background-color: #fff;
     flex-direction: row;
     align-items: center;
+}
+
+.wrapper>.news__container>.news__card:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.wrapper>.news__container>.news__card:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.wrapper>.news__container>.news__card:nth-child(4) {
+    transition-delay: 600ms;
+}
+
+.wrapper>.news__container>.news__card:nth-child(5) {
+    transition-delay: 800ms;
 }
 
 .wrapper>.news__container>.news__card>.news__image {
@@ -514,13 +533,48 @@ body {
     margin: 10px 0px 20px 50px;
 }
 
-.category__container>ul>li {
+.category__container>ul>a>.category__list {
     width: 100%;
     margin: 10px;
     font-size: clamp(0.7rem, 2vw, 0.9rem);
     text-transform: uppercase;
     color: #686868;
+}
 
+.category__container>ul>a:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.category__container>ul>a:nth-child(3) {
+    transition-delay: 300ms;
+}
+
+.category__container>ul>a:nth-child(4) {
+    transition-delay: 400ms;
+}
+
+.category__container>ul>a:nth-child(5) {
+    transition-delay: 500ms;
+}
+
+.category__container>ul>a:nth-child(6) {
+    transition-delay: 600ms;
+}
+
+.category__container>ul>a:nth-child(7) {
+    transition-delay: 700ms;
+}
+
+.category__container>ul>a:nth-child(8) {
+    transition-delay: 800ms;
+}
+
+.category__container>ul>a:nth-child(9) {
+    transition-delay: 900ms;
+}
+
+.category__container>ul>a:nth-child(10) {
+    transition-delay: 1000ms;
 }
 
 .category__container>.category__advertisement__section>img {
@@ -528,6 +582,7 @@ body {
     height: 20rem;
     padding: 10px 10px 5px 10px;
     object-fit: cover;
+    transition-delay: 1000ms;
 }
 
 /* CATEGORY SECTION CSS ENDS HERE */
@@ -671,6 +726,26 @@ body {
     height: 20rem;
     padding-left: 10px;
     margin-bottom: 20px;
+}
+
+.chamber>.wrapper>.card__container>.card:nth-child(1) {
+    transition-delay: 200ms;
+}
+
+.chamber>.wrapper>.card__container>.card:nth-child(2) {
+    transition-delay: 400ms;
+}
+
+.chamber>.wrapper>.card__container>.card:nth-child(3) {
+    transition-delay: 600ms;
+}
+
+.chamber>.wrapper>.card__container>.card:nth-child(4) {
+    transition-delay: 800ms;
+}
+
+.chamber>.wrapper>.card__container>.card:nth-child(5) {
+    transition-delay: 1000ms;
 }
 
 .chamber>.wrapper>.card__container>.card>.card__image {
@@ -957,8 +1032,6 @@ body {
 .company__info .info__links a:hover {
     text-decoration: underline;
 }
-
-/* FOOTER SECTION CSS ENDS HERE */
 
 
 /* ----------------BLOG DETAILS PAGE CSS FROM HERE---------------------- */
