@@ -1564,7 +1564,6 @@ body {
 .comment__post>form>.user__profile>.user__name {
     padding-left: 5px;
     font-weight: bold;
-    transition-delay: 400ms;
 }
 
 
