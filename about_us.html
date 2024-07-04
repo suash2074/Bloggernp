@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <link rel="stylesheet" href="Assets/CSS/style.css" />
+
+
 </head>
 
 <body>
@@ -154,22 +156,23 @@
       <img src="Assets/Images/Article_image3.jpg" alt="Laptop and books" />
     </figure>
 
-    <div class="company__details">
-      <h1 class="company__name">Able Innovations</h1>
-      <p class="slogan">Enhance your knowledge to next Level</p>
-      <button class="explore__btn"><a href="index.html">Explore Now</a></button>
+    <div class=" company__details">
+      <h1 class="hidden company__name">Able Innovations</h1>
+      <p class="hidden slogan">Enhance your knowledge to next Level</p>
+      <button class="hidden explore__btn"><a href="index.html">Explore Now</a></button>
     </div>
   </main>
 
 
   <section class="company__info__container">
-    <figure class="company__image">
+    <figure class="hidden company__image">
       <img src="Assets/Images/Article_image1.jpg" alt="Laptop and books" />
     </figure>
 
     <div class="company__information">
-      <h1 class="company__name">Able Innovations</h1>
-      <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae excepturi veritatis
+      <h1 class="hidden company__name">Able Innovations</h1>
+      <p class="hidden description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae excepturi
+        veritatis
         corrupti impedit tempore ea aliquam eligendi cupiditate perspiciatis expedita non rerum natus tenetur ad, odio
         provident pariatur nisi? Atque dignissimos laudantium dicta nam cupiditate? Aspernatur ex corrupti in natus
         expedita officia non? Libero animi illo asperiores odio repellendus exercitationem tempore eos quis
@@ -178,7 +181,7 @@
   </section>
 
   <section class="company__team">
-    <div class="team__information">
+    <div class="hidden team__information">
       <h1 class="team__title">Our Team</h1>
       <p class="description">Meet the dedicated and hardworking individuals behind Blooger NP. Our exceptional team is
         passionately committed to delivering the highest standards of excellence and consistently adding significant
@@ -187,19 +190,19 @@
 
     <div class="team__members">
       <div class="image__wrapper">
-        <figure class="members__bio" data-parent="Ram Bahadur">
+        <figure class="members__bio hidden" data-parent="Ram Bahadur">
           <img src="Assets/Images/teamMember1.jpg" alt="Laptop and books" />
         </figure>
 
-        <figure class="members__bio" data-parent="Emma Jackson">
+        <figure class="members__bio hidden" data-parent="Emma Jackson">
           <img src="Assets/Images/teamMember3.jpg" alt="Laptop and books" />
         </figure>
 
-        <figure class="members__bio" data-parent="Rock Taylor">
+        <figure class="members__bio hidden" data-parent="Rock Taylor">
           <img src="Assets/Images/teamMember2.jpg" alt="Laptop and books" />
         </figure>
 
-        <figure class="members__bio" data-parent="Jenny Simit">
+        <figure class="members__bio hidden" data-parent="Jenny Simit">
           <img src="Assets/Images/teamMember4.jpg" alt="Laptop and books" />
         </figure>
       </div>
@@ -208,17 +211,19 @@
 
   <section id="contact__us" class="contact__us" data-image="url(Assets/Images/buildingsAtNight2.jpg)">
     <div class="contact__info">
-      <h1 class="contact__title">Contact Us</h1>
-      <p class="contact__description">We're here to help and answer any question you might have. We look forward to
+      <h1 class="contact__title hidden ">Contact Us</h1>
+      <p class="contact__description hidden ">We're here to help and answer any question you might have. We look forward
+        to
         hearing from you!</p>
-      <p class="contact__email">Email us at: <a href="mailto:support@example.com"
-          class="contact__link">support@example.com</a></p>
-      <p class="contact__phone">Call us: <span class="contact__phone-number">(123) 456-7890</span></p>
-      <p class="contact__address">Visit us at: <span class="contact__address-text">123 Main Street, Your City, Your
+      <p class="contact__email hidden ">Email us at: <a href="mailto:support@example.com"
+          class="contact__link hidden ">support@example.com</a></p>
+      <p class="contact__phone hidden ">Call us: <span class="contact__phone-number">(123) 456-7890</span></p>
+      <p class="contact__address hidden ">Visit us at: <span class="contact__address-text">123 Main Street, Your City,
+          Your
           Country</span></p>
     </div>
-    
-    <div class="contact__page">
+
+    <div class="contact__page hidden">
       <h1>CONTACT US!</h1>
       <form action="#" method="post" class="contact__form">
         <div class="input__container">
@@ -226,7 +231,7 @@
             <label for="first__name">First Name <span class="star">*</span></label>
             <input type="text" id="firstName" name="firstName" placeholder="Your First Name" required>
           </div>
-        
+
           <div class="input__box">
             <label for="last__name">Last Name <span class="star">*</span></label>
             <input type="text" id="lastName" name="lastName" placeholder="Your Last Name" required>
@@ -235,7 +240,7 @@
 
         <label for="email">Email <span class="star">*</span></label>
         <input type="email" id="email" name="email" placeholder="Your Email" required>
-        
+
         <label for="message">Message <span class="star">*</span></label>
         <textarea id="message" name="message" placeholder="Your Message" required></textarea>
         <button type="submit">Contact Our Agents Now!</button>
@@ -244,8 +249,8 @@
     </div>
   </section>
   <!-- Footer section  -->
-  <footer class="footer__container">
-    <section class="about__company">
+  <footer class="footer__container ">
+    <section class="about__company hidden">
       <figure class="logo">
         <img src="Assets/Images/blogernpLogo.png" alt="logo" />
       </figure>
@@ -256,9 +261,9 @@
     </section>
 
     <section class="social__links">
-      <h3 class="footer__headline">Social Connect</h3>
+      <h3 class="footer__headline hidden">Social Connect</h3>
       <div class="social__container">
-        <div class="social__card">
+        <div class="social__card hidden">
           <figure class="social__image">
             <img src="Assets/Images/Facebook_logo.jpg" alt="Facebook logo">
           </figure>
@@ -266,7 +271,7 @@
 
           <button class="social__btn"><a href="#">Like</a></button>
         </div>
-        <div class="social__card">
+        <div class="social__card hidden">
           <figure class="social__image">
             <img src="Assets/Images/Twitter_logo.jpg" alt="Twitter logo">
           </figure>
@@ -274,7 +279,7 @@
 
           <button class="social__btn"><a href="#">Tweet</a></button>
         </div>
-        <div class="social__card">
+        <div class="social__card hidden">
           <figure class="social__image">
             <img src="Assets/Images/Instagram_logo.jpg" alt="Instagram logo">
           </figure>
@@ -282,7 +287,7 @@
 
           <button class="social__btn"><a href="#">Follow</a></button>
         </div>
-        <div class="social__card">
+        <div class="social__card hidden">
           <figure class="social__image">
             <img src="Assets/Images/Youtube_logo.jpg" alt="Youtube logo">
           </figure>
@@ -292,29 +297,29 @@
       </div>
     </section>
 
-    <section class="company__info">
-      <h3 class="footer__headline">Company Info</h3>
+    <section class="company__info ">
+      <h3 class="footer__headline hidden">Company Info</h3>
       <div class="info__links">
-        <a href="about_us.html">About us</a>
-        <a href="#">Careers</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#contact__us">Contact us</a>
-        <a href="#">Archives</a>
-        <a href="#">Local print ads</a>
-        <a href="#">Coupons</a>
-        <a href="#">FAQ</a>
-        <a href="#">Manage Web Notifications</a>
-        <a href="#">Media kit</a>
-        <a href="#">Chicago Tribune Store</a>
+        <a class="hidden" href="about_us.html">About us</a>
+        <a class="hidden" href="#">Careers</a>
+        <a class="hidden" href="#">Terms of Service</a>
+        <a class="hidden" href="#">Privacy Policy</a>
+        <a class="hidden" href="#contact__us">Contact us</a>
+        <a class="hidden" href="#">Archives</a>
+        <a class="hidden" href="#">Local print ads</a>
+        <a class="hidden" href="#">Coupons</a>
+        <a class="hidden" href="#">FAQ</a>
+        <a class="hidden" href="#">Manage Web Notifications</a>
+        <a class="hidden" href="#">Media kit</a>
+        <a class="hidden" href="#">Chicago Tribune Store</a>
     </section>
   </footer>
+
   <!-- Swiper JS CDN-->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-
   <script src="Assets/JS/jquery.min.js"></script>
-  <script src="Assets/JS/app.js"></script>
+  <script defer src="Assets/JS/app.js"></script>
 </body>
 
 </html>

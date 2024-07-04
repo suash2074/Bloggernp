@@ -13,6 +13,19 @@ html {
     scroll-behavior: smooth;
 }
 
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 1.5s;
+    transform: translateX(-100%);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
 body {
     background-color: #f4f2f2;
 }
@@ -867,6 +880,19 @@ body {
     align-items: center;
 }
 
+.footer__container>.social__links>.social__container>.social__card:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.footer__container>.social__links>.social__container>.social__card:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.footer__container>.social__links>.social__container>.social__card:nth-child(4) {
+    transition-delay: 600ms;
+}
+
+
 .footer__container>.social__links>.social__container>.social__card>.social__image>img {
     width: 40px;
     height: 40px;
@@ -920,6 +946,14 @@ body {
     padding-bottom: 15px;
 }
 
+.company__info .info__links>a:nth-child(odd) {
+    transition-delay: 400ms;
+}
+
+.company__info .info__links>a:nth-child(even) {
+    transition-delay: 600ms;
+}
+
 .company__info .info__links a:hover {
     text-decoration: underline;
 }
@@ -928,7 +962,6 @@ body {
 
 
 /* ----------------BLOG DETAILS PAGE CSS FROM HERE---------------------- */
-/*  */
 .blog__details__container {
     width: 100%;
     height: fit-content;
@@ -1669,6 +1702,7 @@ body {
     font-size: clamp(2rem, 4vw, 4rem);
     font-weight: bold;
     text-transform: uppercase;
+    transition-delay: 200ms;
 }
 
 .about__container>.company__details>.slogan {
@@ -1676,6 +1710,7 @@ body {
     font-weight: bold;
     padding: 10px;
     font-family: "Roboto Condensed", sans-serif;
+    transition-delay: 400ms;
 }
 
 .about__container>.company__details>.explore__btn {
@@ -1683,6 +1718,7 @@ body {
     padding: 15px 50px;
     background-color: #e44a4a;
     border: none;
+    transition-delay: 600ms;
 }
 
 .about__container>.company__details>.explore__btn>a {
@@ -1699,6 +1735,10 @@ body {
     margin: 40px auto;
 }
 
+.company__info__container>.company__image {
+    transition-delay: 200ms;
+}
+
 .company__info__container>.company__image>img {
     width: 500px;
     height: 60vh;
@@ -1713,11 +1753,13 @@ body {
 
 .company__info__container>.company__information>.company__name {
     font-size: clamp(1.5rem, 2.5vw, 2rem);
+    transition-delay: 600ms;
 }
 
 .company__info__container>.company__information>.description {
     font-size: clamp(1rem, 1.2vw, 1.1rem);
     line-height: 1.5;
+    transition-delay: 1s;
 }
 
 
@@ -1775,6 +1817,26 @@ body {
     transition: 0.5s linear;
     filter: grayscale(0.5);
     overflow: hidden;
+}
+
+.company__team>.team__members>.image__wrapper>.members__bio:nth-child(1) {
+    transition-delay: 200ms;
+}
+
+.company__team>.team__members>.image__wrapper>.members__bio:nth-child(2) {
+    transition-delay: 400ms;
+}
+
+.company__team>.team__members>.image__wrapper>.members__bio:nth-child(3) {
+    transition-delay: 600ms;
+}
+
+.company__team>.team__members>.image__wrapper>.members__bio:nth-child(4) {
+    transition-delay: 800ms;
+}
+
+.company__team>.team__members>.image__wrapper>.members__bio:nth-child(5) {
+    transition-delay: 1000ms;
 }
 
 .company__team>.team__members>.image__wrapper>.members__bio::after {
@@ -1854,12 +1916,13 @@ body {
     font-weight: bold;
     color: #e44a4a;
     margin-bottom: clamp(10px, 2vw, 20px);
+    transition-delay: 200ms;
 }
 
 .contact__info>.contact__description {
-    /* font-size: 1.2rem; */
     font-size: clamp(1rem, 1.5vw, 1.2rem);
     line-height: 1.4;
+    transition-delay: 400ms;
 }
 
 .contact__info>.contact__email,
@@ -1868,6 +1931,7 @@ body {
     width: 100%;
     font-size: clamp(1rem, 1.5vw, 1.2rem);
     line-height: 1.4;
+    transition-delay: 600ms;
 }
 
 .contact__info>.contact__email>.contact__link {
@@ -1883,6 +1947,7 @@ body {
     box-shadow: 0 0 10px rgba(114, 114, 114, 0.874);
     z-index: 10;
     transition: 1s ease-in-out;
+    transition-delay: 200ms;
 
 }
 
@@ -1910,7 +1975,6 @@ body {
     flex-direction: column;
     background-color: #000000;
     padding-right: clamp(10px, 2vw, 20px);
-
 }
 
 .contact__page>.contact__form>.input__container {
