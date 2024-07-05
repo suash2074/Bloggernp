@@ -501,6 +501,7 @@ body {
 
 
 .wrapper>.news__container>.news__card>.news__card__body>.upload__date {
+    width: 100%;
     color: #686868;
     display: flex;
     justify-content: flex-end;
