@@ -2445,6 +2445,7 @@ label>.star {
 
     .slider__container>.swiper-wrapper>.news__slider>.news__slider__image {
         width: 100%;
+        overflow: hidden;
     }
 
     .slider__container>.swiper-wrapper>.news__slider>.news__slider__image>img {
