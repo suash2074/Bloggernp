@@ -2424,7 +2424,7 @@ label>.star {
         content: "";
         width: 10rem;
         position: absolute;
-        top: 15px;
+        top: 5px;
         border-top: 3px dotted #d61414;
     }
 
