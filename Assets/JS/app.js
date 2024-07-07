@@ -33,7 +33,7 @@ function validateEmail() {
   }); // End Window Load
 })(jQuery, window, document);
 
-
+// Comment like button fucntion 
 $(document).ready(function () {
   $(".heart__btn").click(function () {
     let numberElement = $(this).find('.number');
@@ -55,6 +55,8 @@ $(document).ready(function () {
   });
 });
 
+
+// Contact background image replacer  
 document.addEventListener('DOMContentLoaded', function () {
   var contactUsSection = document.querySelector('.contact__us');
   var imageUrl = contactUsSection.getAttribute('data-image');
@@ -63,6 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// On scroll content load event
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     console.log(entry)
