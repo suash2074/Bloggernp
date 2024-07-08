@@ -51,29 +51,51 @@
       </figure>
     </div>
 
-    <div class="login-form">
+    <div class="register-form">
       <h1>Innovate <span>Talk</span></h1>
-      <h2>Sign In</h2>
+      <h2>Sign Up</h2>
       <form>
-        <div class="field">
-          <input id="username" name="username" type="text" placeholder="" required />
-          <label for="username">Username</label>
-        </div>
-        <div class="field">
-          <input id="password" name="password" type="password" placeholder="" required />
-          <label for="password">Password</label>
+        <div class="row">
+          <div class="col-50">
+            <input id="firstName" name="firstName" type="text" placeholder="" required />
+            <label for="firstName">First Name</label>
+          </div>
+
+          <div class="col-50">
+            <input id="lastName" name="lastName" type="text" placeholder="" required />
+            <label for="lastName">Last Name</label>
+          </div>
         </div>
 
-        <button class="login-btn" type="submit">Login</button>
+        <div class="row">
+          <div class="col-50">
+            <input id="username" name="username" type="text" placeholder="" required />
+            <label for="username">Username</label>
+          </div>
+
+          <div class="col-50">
+            <input id="email" name="email" type="text" placeholder="" required />
+            <label for="email">Email</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-100">
+            <input id="password" name="password" type="password" placeholder="" required />
+            <label for="password">Password</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-100">
+            <input id="conformPassword" name="conformPassword" type="password" placeholder="" required />
+            <label for="conformPassword">Conform Password</label>
+          </div>
+        </div>
+
+        <button class="register-btn" type="submit">Login</button>
       </form>
-      <p>Don't have an account? <a href="register.html">Sign Up</a></p>
-
-      <p class="other-login">or</a></p>
-
-      <div class="google-btn">
-        <img src="Assets/Images/google.png" alt="">
-        <button class="google-login-btn" type="submit">Sign in with google</button>
-      </div>
+      <p>Already registered <a href="login.html">Sign In Here</a></p>
     </div>
 
   </section>
