@@ -234,19 +234,6 @@ body {
     height: 100vh;
 }
 
-/* 
-.welcome-section>img:nth-child(3) {
-    position: absolute;
-    top: 0;
-    right: 45%;
-    right: 0;
-    width: 45%;
-    height: 500px;
-    object-fit: cover;
-    transform: rotate(180deg);
-    z-index: 1;
-} */
-
 .welcome-section>.logo {
     position: absolute;
     bottom: 13%;
@@ -268,9 +255,10 @@ body {
 
 .login-form {
     position: relative;
-    width: 40%;
-    height: fit-content;
-    padding: 40px 60px;
+    width: 100%;
+    max-width: 40%;
+    height: 100vh;
+    padding: 40px 20px;
     margin: 10vh;
     display: flex;
     flex-direction: column;
@@ -282,8 +270,8 @@ body {
 
 .login-form h1 {
     position: absolute;
-    top: -30px;
-    right: 70px;
+    top: 0px;
+    right: 30px;
     font-size: 1.8rem;
     color: #e44a4a;
     font-family: "Playwrite GB S", cursive;
@@ -302,6 +290,76 @@ h2 {
 
 form {
     width: 100%;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.col-50 {
+    position: relative;
+    width: 100%;
+    max-width: 48%;
+    margin: 10px 0;
+}
+
+.col-100 {
+    position: relative;
+    width: 100%;
+    max-width: 98%;
+    margin: 10px 0;
+}
+
+.icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    cursor: pointer;
+    width: 20px;
+    /* Adjust as needed */
+    height: 20px;
+}
+
+.error-message {
+    color: red;
+    display: none;
+}
+
+form>.row>.col-50>label,
+form>.row>.col-100>label {
+    width: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #00000042;
+    transition: 0.5s ease-in-out;
+}
+
+.row>.col-50>input:focus+label,
+.row>.col-50>input:not(:placeholder-shown)~label,
+.row>.col-100>input:focus+label,
+.row>.col-100>input:not(:placeholder-shown)~label {
+    top: -10px;
+    left: 10px;
+    color: #333;
+}
+
+.row>.col-50>input,
+.row>.col-100>input {
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 10px 10px 5px 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #3131318a;
+    background: transparent;
+    color: #000000a7;
+    font-family: "Roboto Condensed", sans-serif;
+    outline: none;
 }
 
 form>.login-btn,
@@ -361,7 +419,7 @@ form>.register-btn {
     position: relative;
     width: 100%;
     max-width: 40%;
-    height: fit-content;
+    height: 100vh;
     padding: 40px 20px;
     margin: 10vh;
     display: flex;
@@ -374,8 +432,8 @@ form>.register-btn {
 
 .register-form h1 {
     position: absolute;
-    top: -30px;
-    right: 70px;
+    top: 0;
+    right: 30px;
     font-size: 1.8rem;
     color: #e44a4a;
     font-family: "Playwrite GB S", cursive;
@@ -386,99 +444,20 @@ form>.register-btn {
     color: #000;
 }
 
-
-.register-form form>.row {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.col-50 {
-    position: relative;
-    width: 100%;
-    max-width: 48%;
-    margin: 10px 0;
-}
-
-.col-100 {
-    position: relative;
-    width: 100%;
-    max-width: 98%;
-    margin: 10px 0;
-}
-
-.icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
-    cursor: pointer;
-    width: 20px;
-    /* Adjust as needed */
-    height: 20px;
-}
-
-
-.error-message {
-    color: red;
-    display: none;
-}
-
-form>.row>.col-50>label,
-form>.row>.col-100>label {
-    width: 50%;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: #00000042;
-    transition: 0.5s ease-in-out;
-}
-
-.row>.col-50>input:focus+label,
-.row>.col-50>input:not(:placeholder-shown)~label,
-.row>.col-100>input:focus+label,
-.row>.col-100>input:not(:placeholder-shown)~label {
-    top: -10px;
-    left: 10px;
-    color: #333;
-}
-
-.row>.col-50>input,
-.row>.col-100>input {
-    font-size: 1.1rem;
-    width: 100%;
-    padding: 10px 10px 5px 10px;
-    margin-bottom: 20px;
-    border: none;
-    border-bottom: 1px solid #3131318a;
-    background: transparent;
-    color: #000000a7;
-    font-family: "Roboto Condensed", sans-serif;
-    outline: none;
-}
-
 @media screen and (max-width:992px) {
 
-    .register-form {
+
+    .register-form,
+    .login-form {
         max-width: 100%;
         padding: 40px;
         margin: 5vh 0;
     }
 
-    .register-form form .col {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .register-form form .col .field {
-        max-width: 100%;
-    }
-
+    .login-form h1,
     .register-form h1 {
-        right: auto;
-        left: 50%;
-        transform: translateX(-50%);
+        right: 0;
+        transform: translateX(-30%);
     }
 
     .col-50 {
@@ -487,20 +466,83 @@ form>.row>.col-100>label {
 }
 
 @media screen and (max-width: 768px) {
-    .welcome-section {
-        max-width: 100%;
+    .container>.welcome-section {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .container>.welcome-section::after {
+        content: "";
+        width: 100%;
+        height: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    }
+
+    form {
+        z-index: 2;
+    }
+
+    h2,
+    p,
+    .login-form h1>span,
+    .register-form h1>span,
+    .row>.col-50>input,
+    .row>.col-100>input,
+    form>.row>.col-50>label,
+    form>.row>.col-100>label,
+    .login-form>.other-login {
+        color: #f8f8f878;
+        z-index: 10;
+    }
+
+    .login-form h1, .register-form h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        padding: 10px;
+    }
+
+    .row>.col-50>input,
+    .row>.col-100>input {
+        border-bottom: 1px solid #dfdfdf8a
+    }
+
+    .col-100,
+    .col-50 {
+        margin: 5px;
+    }
+
+    form>.login-btn,
+    form>.register-btn {
+        margin: 10px 0;
+    }
+
+
+    .row>.col-50>input:focus+label,
+    .row>.col-50>input:not(:placeholder-shown)~label,
+    .row>.col-100>input:focus+label,
+    .row>.col-100>input:not(:placeholder-shown)~label {
+        color: #f8f8f81f;
     }
 
 
 }
 
 @media screen and (max-width: 480px) {
-    .register-form h2 {
-        font-size: 2.5rem;
+
+    .register-form,
+    .login-form {
+        padding: 15px;
     }
 
-    .register-form h1 {
-        font-size: 1.5rem;
-        top: -20px;
+    .col-50 {
+        max-width: 40%;
     }
 }
