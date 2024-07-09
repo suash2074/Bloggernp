@@ -462,16 +462,14 @@ body {
     height: 20px;
 }
 
-.row>.input[type="password"] +.icon{
-}
 
 .error-message {
     color: red;
     display: none;
 }
 
-.register-form form>.row>.col-50>label,
-.register-form form>.row>.col-100>label {
+ form>.row>.col-50>label,
+ form>.row>.col-100>label {
     width: 50%;
     position: absolute;
     top: 10px;
@@ -480,17 +478,17 @@ body {
     transition: 0.5s ease-in-out;
 }
 
-.register-form .row>.col-50>input:focus+label,
-.register-form .row>.col-50>input:not(:placeholder-shown)~label,
-.register-form .row>.col-100>input:focus+label,
-.register-form .row>.col-100>input:not(:placeholder-shown)~label {
+ .row>.col-50>input:focus+label,
+ .row>.col-50>input:not(:placeholder-shown)~label,
+ .row>.col-100>input:focus+label,
+ .row>.col-100>input:not(:placeholder-shown)~label {
     top: -10px;
     left: 10px;
     color: #333;
 }
 
-.register-form .row>.col-50>input,
-.register-form .row>.col-100>input {
+ .row>.col-50>input,
+ .row>.col-100>input {
     font-size: 1.1rem;
     width: 100%;
     padding: 10px 10px 5px 10px;
@@ -503,7 +501,7 @@ body {
     outline: none;
 }
 
-.register-form>form>.register-btn {
+form>.register-btn {
     width: 100%;
     font-size: 1.1rem;
     padding: 10px;
