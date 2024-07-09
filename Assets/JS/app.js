@@ -80,3 +80,21 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
+
+// Password verification event
+document.getElementById('confirmPassword').addEventListener('input', checkPasswords);
+
+function checkPasswords() {
+  var password = document.getElementById('password').value;
+  var confirmPassword = document.getElementById('confirmPassword').value;
+  var errorMessage = document.getElementById('error-message');
+
+  if (password !== confirmPassword) {
+    errorMessage.style.display = 'inline';
+  } else {
+    errorMessage.style.display = 'none';
+  }
+}
+
+document.getElementById('password').addEventListener('input', checkPasswords);
+document.getElementById('confirmPassword').addEventListener('input', checkPasswords);
