@@ -82,8 +82,6 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 
 // Password verification event
-document.getElementById('confirmPassword').addEventListener('input', checkPasswords);
-
 function checkPasswords() {
   var password = document.getElementById('password').value;
   var confirmPassword = document.getElementById('confirmPassword').value;
@@ -98,3 +96,29 @@ function checkPasswords() {
 
 document.getElementById('password').addEventListener('input', checkPasswords);
 document.getElementById('confirmPassword').addEventListener('input', checkPasswords);
+
+// Image toogle event
+
+function toggleVisibility(inputId, imageId, hideSrc, showSrc) {
+      var inputField = document.getElementById(inputId);
+      var image = document.getElementById(imageId);
+
+      if (inputField.type === 'password') {
+        inputField.type = 'text';
+        image.src = showSrc;
+      } else {
+        inputField.type = 'password';
+        image.src = hideSrc;
+      }
+    }
+
+  // Add click event listener to toggle password visibility and image toggling
+  document.getElementById('togglePasswordImage').addEventListener('click', function() {
+    toggleVisibility('password', 'togglePasswordImage', 'Assets/Icons/Close-Eyes--Streamline-Ultimate.png', 'Assets/Icons/Open--Eye.png');
+  });
+
+  // Add click event listener to toggle confirm password visibility
+  document.getElementById('toggleConfirmPasswordImage').addEventListener('click', function() {
+    toggleVisibility('confirmPassword', 'toggleConfirmPasswordImage', 'Assets/Icons/Close-Eyes--Streamline-Ultimate.png', 'Assets/Icons/Open--Eye.png');
+  });
+
