@@ -294,51 +294,18 @@ body {
     color: #000;
 }
 
-.login-form h2 {
+h2 {
     font-size: 3rem;
     padding: 20px;
     z-index: 1;
 }
 
-.login-form form {
+form {
     width: 100%;
 }
 
-.login-form form>.field {
-    position: relative;
-    width: 100%;
-}
-
-.login-form .field>label {
-    width: 100%;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: #00000042;
-    transition: 0.5s ease-in-out;
-}
-
-.login-form .field>input:focus+label,
-.login-form .field>input:not(:placeholder-shown)~label {
-    top: -10px;
-    left: 10px;
-    color: #333;
-}
-
-.login-form .field>input {
-    font-size: 1.1rem;
-    width: 100%;
-    padding: 10px 10px 5px 10px;
-    margin-bottom: 20px;
-    border: none;
-    border-bottom: 1px solid #3131318a;
-    background: transparent;
-    color: #000000a7;
-    font-family: "Roboto Condensed", sans-serif;
-    outline: none;
-}
-
-.login-form>form>.login-btn {
+form>.login-btn,
+form>.register-btn {
     width: 100%;
     font-size: 1.1rem;
     padding: 10px;
@@ -390,8 +357,6 @@ body {
 
 /* REGISTER FORM CSS */
 
-/* LOGIN FORM CSS */
-
 .register-form {
     position: relative;
     width: 100%;
@@ -421,15 +386,6 @@ body {
     color: #000;
 }
 
-.register-form h2 {
-    font-size: 3rem;
-    padding: 20px;
-    z-index: 1;
-}
-
-.register-form form {
-    width: 100%;
-}
 
 .register-form form>.row {
     width: 100%;
@@ -458,7 +414,8 @@ body {
     right: 10px;
     filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
     cursor: pointer;
-    width: 20px; /* Adjust as needed */
+    width: 20px;
+    /* Adjust as needed */
     height: 20px;
 }
 
@@ -468,8 +425,8 @@ body {
     display: none;
 }
 
- form>.row>.col-50>label,
- form>.row>.col-100>label {
+form>.row>.col-50>label,
+form>.row>.col-100>label {
     width: 50%;
     position: absolute;
     top: 10px;
@@ -478,17 +435,17 @@ body {
     transition: 0.5s ease-in-out;
 }
 
- .row>.col-50>input:focus+label,
- .row>.col-50>input:not(:placeholder-shown)~label,
- .row>.col-100>input:focus+label,
- .row>.col-100>input:not(:placeholder-shown)~label {
+.row>.col-50>input:focus+label,
+.row>.col-50>input:not(:placeholder-shown)~label,
+.row>.col-100>input:focus+label,
+.row>.col-100>input:not(:placeholder-shown)~label {
     top: -10px;
     left: 10px;
     color: #333;
 }
 
- .row>.col-50>input,
- .row>.col-100>input {
+.row>.col-50>input,
+.row>.col-100>input {
     font-size: 1.1rem;
     width: 100%;
     padding: 10px 10px 5px 10px;
@@ -499,19 +456,6 @@ body {
     color: #000000a7;
     font-family: "Roboto Condensed", sans-serif;
     outline: none;
-}
-
-form>.register-btn {
-    width: 100%;
-    font-size: 1.1rem;
-    padding: 10px;
-    margin: 20px 0;
-    border: none;
-    color: #fff;
-    background: #e44a4a;
-    font-family: "Roboto Condensed", sans-serif;
-    letter-spacing: 2px;
-    cursor: pointer;
 }
 
 @media screen and (max-width:992px) {
