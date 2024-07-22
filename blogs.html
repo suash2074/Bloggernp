@@ -16,6 +16,264 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <link rel="stylesheet" href="Assets/CSS/style.css" />
+
+  <style>
+    .preview {
+      position: relative;
+      width: 100%;
+      height: 16rem;
+    }
+
+    .preview>.preview__image>img {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 16rem;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    /* Making the preview image darker to make the text more visible. */
+    .preview>.preview__image::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+      z-index: -1;
+    }
+
+    .preview>.preview__details {
+      width: 100%;
+      height: 100%;
+      color: #bcbbbb;
+      /* color: #f8f8f8; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .preview>.preview__details>.category__title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      text-transform: uppercase;
+    }
+
+    /* NEWS SECTION CSS STARTS HERE */
+    .blogs__container {
+      width: 100%;
+      background-color: #f4f2f2;
+    }
+
+    .blogs__container>.wrapper {
+      position: relative;
+      width: 95%;
+      display: flex;
+      margin: auto;
+      background-color: #f4f2f2;
+    }
+
+    .blogs__container>.wrapper>.blog__container {
+      width: 70%;
+      height: 150vh;
+      overflow-y: scroll;
+      scrollbar-width: thin;
+      scrollbar-color: #b5b4b4 #ffffff00;
+
+    }
+
+    .blog__container>.row {
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+      background-color: #f4f2f2;
+
+    }
+
+    .column-50 {
+      width: 48% !important;
+    }
+
+    .column-100 {
+      width: 97% !important;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .blog__container>.row>.column-50>.card__image {
+      width: 100%;
+      height: 14rem;
+      overflow: hidden;
+      border-radius: 3px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .blog__container>.row>.column-50>.card__image>a>img {
+      width: 100%;
+      height: 14rem;
+      object-fit: cover;
+      transition: 0.5s ease-in-out;
+    }
+
+    .blog__container>.row>.column-50>.card__image>a:hover>img {
+      scale: 1.2;
+    }
+
+    .blog__container>.row>.column-50>.card__body {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .blog__container>.row>.column-50>.card__body>.upload__date {
+      margin: auto;
+      margin-left: 10px;
+      color: #777777;
+    }
+
+    .blog__container>.row>.card {
+      height: fit-content;
+      margin-bottom: 20px;
+      background-color: #fff;
+      border-radius: 3px;
+    }
+
+    .blog__container>.row>.column-100>.card__image {
+      width: 40%;
+      height: fit-content;
+      border-radius: 5px;
+      padding: 10px;
+      overflow: hidden;
+
+    }
+
+    .blog__container>.row>.column-100>.card__image>a>img {
+      width: 100%;
+      height: 14rem;
+      border-radius: 5px;
+      object-fit: cover;
+      transition: 0.5s ease-in-out;
+    }
+
+    .blog__container>.row>.column-100>.card__image>a:hover>img {
+      scale: 1.2;
+    }
+
+    .blog__container>.row>.column-100>.card__body {
+      width: 50%;
+      padding: 10px 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog__container>.row>.column-100>.card__body>.upload__date {
+      width: 100%;
+      color: #686868;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .blog__container>.row>.card>.card__body>.card__title {
+      margin: 10px 0;
+      text-align: justify;
+    }
+
+    .blog__container>.row>.card>.card__body>.user__profile>p>.user__name {
+      font-weight: bold;
+      color: #e44a4a;
+    }
+
+
+    .fa-regular {
+      margin-right: 5px;
+    }
+
+    /*  */
+
+
+
+
+
+
+
+
+    /* CATEGORY SECTION CSS ENDS HERE */
+
+    .blog__container {
+      position: relative;
+      width: 30%;
+      height: fit-content;
+      margin: 15px;
+      border-radius: 3px;
+      background-color: #fff;
+    }
+
+    .blog__container>.category__headline {
+      width: clamp(10rem, 20vw, 15rem);
+    }
+
+    .blog__container>ul {
+      margin: 10px 0px 20px 50px;
+    }
+
+    .blog__container>ul>a>.category__list {
+      width: 100%;
+      margin: 10px;
+      font-size: clamp(0.7rem, 2vw, 0.9rem);
+      text-transform: uppercase;
+      color: #686868;
+    }
+
+    .blog__container>ul>a:nth-child(2) {
+      transition-delay: 200ms;
+    }
+
+    .blog__container>ul>a:nth-child(3) {
+      transition-delay: 300ms;
+    }
+
+    .blog__container>ul>a:nth-child(4) {
+      transition-delay: 400ms;
+    }
+
+    .blog__container>ul>a:nth-child(5) {
+      transition-delay: 500ms;
+    }
+
+    .blog__container>ul>a:nth-child(6) {
+      transition-delay: 600ms;
+    }
+
+    .blog__container>ul>a:nth-child(7) {
+      transition-delay: 700ms;
+    }
+
+    .blog__container>ul>a:nth-child(8) {
+      transition-delay: 800ms;
+    }
+
+    .blog__container>ul>a:nth-child(9) {
+      transition-delay: 900ms;
+    }
+
+    .blog__container>ul>a:nth-child(10) {
+      transition-delay: 1000ms;
+    }
+
+    .blog__container>.category__advertisement__section>img {
+      width: 100%;
+      height: 20rem;
+      padding: 10px 10px 5px 10px;
+      object-fit: cover;
+      transition-delay: 1000ms;
+    }
+
+    /* CATEGORY SECTION CSS ENDS HERE */
+  </style>
 </head>
 
 <body>
@@ -144,145 +402,267 @@
   <!-- End of header tag -->
 
   <!-- Preview section -->
-  <section class="blog__preview">
+  <section class="preview">
     <figure class="preview__image">
       <img src="Assets/Images/previewImage.jpg" alt="Laptop and books" />
     </figure>
 
     <div class="preview__details">
-      <!-- <p class="category hidden">Technology</p>
-      <p class="upload__date hidden">
-        <i class="fa-regular fa-calendar-days"></i>
-        May 5th 2004
-      </p>
-      <a href="blog_details.html">
-        <h2 class="preview__title hidden">
-          Spot Misinformation online with these tips
-        </h2>
-      </a>
-      <p class="preview__description hidden">
-        How effectively the massive shopping center can repurpose more than
-        300,000 square feet soon to be vacated.
-      </p>
-      <div class="user__profile hidden">
-        <img src="Assets/Images/User-1.jpg" alt="User name Joshep Mathew" />
-        <p>By <span class="user__name"> Joshep Mathew </span></p>
-      </div>
-    </div> -->
+      <h2 class="category__title">Technology</h2>
   </section>
   <!-- End of preview section -->
 
-  <main class="container">
+  <main class="blogs__container">
     <section class="wrapper">
       <!-- Start of article section -->
-      <section class="news__container">
-        <h3 class="news__headline hidden">Latest News</h3>
+      <section class="blog__container">
+        <!-- <h3 class="news__headline hidden">Category Name</h3> -->
 
-        <!-- Starting of news card -->
-        <article class="news__card hidden">
-          <figure class="news__image">
-            <a href="blog_details.html">
-              <img src="Assets/Images/Article_image1.jpg" alt="Office environment" loading="lazy" />
-            </a>
-          </figure>
-          <hr />
 
-          <div class="news__card__body">
-            <p class="category">Technology</p>
-            <p class="news__title">
-              Latest News Technology How you'll find accurate and timely
-              information on COVID-19 vaccines How you'll find accurate and
-              timely ?
-            </p>
-            <div class="user__profile">
-              <img src="Assets/Images/User-1.jpg" alt="User name Joshep Mathew" />
-              <p>By <span class="user__name"> Joshep Mathew </span></p>
+        <article class="row">
+          <div class="card hidden column-50">
+            <figure class="card__image">
+              <a href="blog_details_premium.html">
+                <img src="Assets/Images/Article_image2.jpg" alt="Office environment" />
+              </a>
+            </figure>
+
+            <div class="card__body">
+              <p class="category">Technology</p>
+              <p class="upload__date">
+                <i class="fa-regular fa-calendar-days"></i>
+                May 5th 2004
+              </p>
+
+              <p class="card__title">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, quia.
+              </p>
+
+              <div class="user__profile">
+                <img src="Assets/Images/User-1.jpg" alt="User name Joshep Mathew" />
+                <p>By <span class="user__name"> Joshep Mathew </span></p>
+              </div>
             </div>
-            <p class="upload__date">
-              <i class="fa-regular fa-calendar-days"></i>
-              May 5th 2004
-            </p>
           </div>
-        </article>
-        <!-- End of news card -->
 
-        <article class="news__card hidden">
-          <figure class="news__image">
-            <a href="blog_details.html">
-              <img src="Assets/Images/Article_image2.jpg" alt="Office environment" loading="lazy" />
-          </figure>
-          <hr />
-          </a>
-          <div class="news__card__body">
-            <p class="category">Technology</p>
-            <p class="news__title">
-              Latest News Technology How you'll find accurate and timely
-              information on COVID-19 vaccines How you'll find accurate and
-              timely ?
-            </p>
+          <div class="card hidden column-50">
+            <figure class="card__image">
+              <a href="blog_details_premium.html">
+                <img src="Assets/Images/Article_image1.jpg" alt="Office environment" />
+              </a>
+            </figure>
 
-            <div class="user__profile">
-              <img src="Assets/Images/User-1.jpg" alt="User name Joshep Mathew" />
-              <p>By <span class="user__name"> Joshep Mathew </span></p>
+            <div class="card__body">
+              <p class="category">Technology</p>
+              <p class="upload__date">
+                <i class="fa-regular fa-calendar-days"></i>
+                May 5th 2004
+              </p>
+
+              <p class="card__title">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, quia.
+              </p>
+
+              <div class="user__profile">
+                <img src="Assets/Images/User-1.jpg" alt="User name Joshep Mathew" />
+                <p>By <span class="user__name"> Joshep Mathew </span></p>
+              </div>
             </div>
-            <p class="upload__date">
-              <i class="fa-regular fa-calendar-days"></i>
-              May 5th 2004
-            </p>
-          </div>
-        </article>
-
-        <article class="news__card hidden">
-          <figure class="news__image">
-            <a href="blog_details.html">
-              <img src="Assets/Images/Article_image3.jpg" alt="Office environment" loading="lazy" />
-          </figure>
-          <hr />
-          </a>
-          <div class="news__card__body">
-            <p class="category">Technology</p>
-            <p class="news__title">
-              Latest News Technology How you'll find accurate and timely
-              information on COVID-19 vaccines How you'll find accurate and
-              timely ?
-            </p>
-
-            <div class="user__profile">
-              <img src="Assets/Images/User-1.jpg" alt="User name Joshep Mathew" />
-              <p>By <span class="user__name"> Joshep Mathew </span></p>
-            </div>
-            <p class="upload__date">
-              <i class="fa-regular fa-calendar-days"></i>
-              May 5th 2004
-            </p>
           </div>
         </article>
 
-        <article class="news__card hidden">
-          <figure class="news__image">
-            <a href="blog_details.html">
-              <img src="Assets/Images/Article_image4.jpg" alt="Office environment" loading="lazy" />
-            </a>
-          </figure>
-          <hr />
-          <div class="news__card__body">
-            <p class="category">Technology</p>
-            <p class="news__title">
-              Latest News Technology How you'll find accurate and timely
-              information on COVID-19 vaccines How you'll find accurate and
-              timely ?
-            </p>
+        <article class="row">
+          <div class="card hidden column-100">
+            <figure class="card__image">
+              <a href="blog_details_premium.html">
+                <img src="Assets/Images/Article_image4.jpg" alt="Office environment" />
+              </a>
+            </figure>
 
-            <div class="user__profile">
-              <img src="Assets/Images/User-1.jpg" alt="User name Joshep Mathew" />
-              <p>By <span class="user__name"> Joshep Mathew </span></p>
+            <div class="card__body">
+              <p class="category">Technology</p>
+              <p class="card__title">
+                Latest News Technology How you'll find accurate and timely
+                information on COVID-19 vaccines How you'll find accurate and
+                timely ?
+              </p>
+
+              <div class="user__profile">
+                <img src="Assets/Images/User-1.jpg" alt="User name Joshep Mathew" />
+                <p>By <span class="user__name"> Joshep Mathew </span></p>
+              </div>
+              <p class="upload__date">
+                <i class="fa-regular fa-calendar-days"></i>
+                May 5th 2004
+              </p>
+
             </div>
-            <p class="upload__date">
-              <i class="fa-regular fa-calendar-days"></i>
-              May 5th 2004
-            </p>
           </div>
         </article>
+
+
+        <article class="row">
+          <div class="card hidden column-50">
+            <figure class="card__image">
+              <a href="blog_details_premium.html">
+                <img src="Assets/Images/Article_image2.jpg" alt="Office environment" />
+              </a>
+            </figure>
+
+            <div class="card__body">
+              <p class="category">Technology</p>
+              <p class="upload__date">
+                <i class="fa-regular fa-calendar-days"></i>
+                May 5th 2004
+              </p>
+
+              <p class="card__title">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, quia.
+              </p>
+
+              <div class="user__profile">
+                <img src="Assets/Images/User-1.jpg" alt="User name Joshep Mathew" />
+                <p>By <span class="user__name"> Joshep Mathew </span></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card hidden column-50">
+            <figure class="card__image">
+              <a href="blog_details_premium.html">
+                <img src="Assets/Images/Article_image1.jpg" alt="Office environment" />
+              </a>
+            </figure>
+
+            <div class="card__body">
+              <p class="category">Technology</p>
+              <p class="upload__date">
+                <i class="fa-regular fa-calendar-days"></i>
+                May 5th 2004
+              </p>
+
+              <p class="card__title">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, quia.
+              </p>
+
+              <div class="user__profile">
+                <img src="Assets/Images/User-1.jpg" alt="User name Joshep Mathew" />
+                <p>By <span class="user__name"> Joshep Mathew </span></p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="row">
+          <div class="card hidden column-100">
+            <figure class="card__image">
+              <a href="blog_details_premium.html">
+                <img src="Assets/Images/Article_image4.jpg" alt="Office environment" />
+              </a>
+            </figure>
+
+            <div class="card__body">
+              <p class="category">Technology</p>
+              <p class="card__title">
+                Latest News Technology How you'll find accurate and timely
+                information on COVID-19 vaccines How you'll find accurate and
+                timely ?
+              </p>
+
+              <div class="user__profile">
+                <img src="Assets/Images/User-1.jpg" alt="User name Joshep Mathew" />
+                <p>By <span class="user__name"> Joshep Mathew </span></p>
+              </div>
+              <p class="upload__date">
+                <i class="fa-regular fa-calendar-days"></i>
+                May 5th 2004
+              </p>
+
+            </div>
+          </div>
+        </article>
+
+        <article class="row">
+          <div class="card hidden column-100">
+            <figure class="card__image">
+              <a href="blog_details_premium.html">
+                <img src="Assets/Images/Article_image4.jpg" alt="Office environment" />
+              </a>
+            </figure>
+
+            <div class="card__body">
+              <p class="category">Technology</p>
+              <p class="card__title">
+                Latest News Technology How you'll find accurate and timely
+                information on COVID-19 vaccines How you'll find accurate and
+                timely ?
+              </p>
+
+              <div class="user__profile">
+                <img src="Assets/Images/User-1.jpg" alt="User name Joshep Mathew" />
+                <p>By <span class="user__name"> Joshep Mathew </span></p>
+              </div>
+              <p class="upload__date">
+                <i class="fa-regular fa-calendar-days"></i>
+                May 5th 2004
+              </p>
+
+            </div>
+          </div>
+        </article>
+
+        <article class="row">
+          <div class="card hidden column-50">
+            <figure class="card__image">
+              <a href="blog_details_premium.html">
+                <img src="Assets/Images/Article_image2.jpg" alt="Office environment" />
+              </a>
+            </figure>
+
+            <div class="card__body">
+              <p class="category">Technology</p>
+              <p class="upload__date">
+                <i class="fa-regular fa-calendar-days"></i>
+                May 5th 2004
+              </p>
+
+              <p class="card__title">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, quia.
+              </p>
+
+              <div class="user__profile">
+                <img src="Assets/Images/User-1.jpg" alt="User name Joshep Mathew" />
+                <p>By <span class="user__name"> Joshep Mathew </span></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card hidden column-50">
+            <figure class="card__image">
+              <a href="blog_details_premium.html">
+                <img src="Assets/Images/Article_image1.jpg" alt="Office environment" />
+              </a>
+            </figure>
+
+            <div class="card__body">
+              <p class="category">Technology</p>
+              <p class="upload__date">
+                <i class="fa-regular fa-calendar-days"></i>
+                May 5th 2004
+              </p>
+
+              <p class="card__title">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, quia.
+              </p>
+
+              <div class="user__profile">
+                <img src="Assets/Images/User-1.jpg" alt="User name Joshep Mathew" />
+                <p>By <span class="user__name"> Joshep Mathew </span></p>
+              </div>
+            </div>
+          </div>
+        </article>
+
       </section>
       <!-- End of article section -->
 
@@ -393,4 +773,3 @@
   <script src="Assets/JS/jquery.min.js"></script>
   <script src="Assets/JS/app.js"></script>
 </body>
-
