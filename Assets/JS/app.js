@@ -122,3 +122,5 @@ document.getElementById('toggleConfirmPasswordImage').addEventListener('click', 
   toggleVisibility('confirmPassword', 'toggleConfirmPasswordImage', 'Assets/Icons/Close-Eyes--Streamline-Ultimate.png', 'Assets/Icons/Open--Eye.png');
 });
 
+
+
