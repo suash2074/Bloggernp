@@ -1034,6 +1034,181 @@ body {
 }
 
 
+/* ----------------BLOGS PAGE CSS FROM HERE---------------------- */
+
+
+.preview {
+    position: relative;
+    width: 100%;
+    height: 16rem;
+  }
+
+  .preview>.preview__image>img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 16rem;
+    object-fit: cover;
+    z-index: -2;
+  }
+
+  /* Making the preview image darker to make the text more visible. */
+  .preview>.preview__image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    z-index: -1;
+  }
+
+  .preview>.preview__details {
+    width: 100%;
+    height: 100%;
+    color: #bcbbbb;
+    /* color: #f8f8f8; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .preview>.preview__details>.category__title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-transform: uppercase;
+  }
+
+  /* NEWS SECTION CSS STARTS HERE */
+  .blogs__container {
+    width: 100%;
+    background-color: #f4f2f2;
+  }
+
+  .blogs__container>.wrapper {
+    position: relative;
+    width: 95%;
+    display: flex;
+    margin: auto;
+    background-color: #f4f2f2;
+  }
+
+  .blogs__container>.wrapper>.blog__container {
+    width: 70%;
+    height: 150vh;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #b5b4b4 #ffffff00;
+
+  }
+
+  .blog__container>.row {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    background-color: #f4f2f2;
+
+  }
+
+  .column-50 {
+    width: 48% !important;
+  }
+
+  .column-100 {
+    width: 97% !important;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .blog__container>.row>.column-50>.card__image {
+    width: 100%;
+    height: 14rem;
+    overflow: hidden;
+    border-radius: 3px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .blog__container>.row>.column-50>.card__image>a>img {
+    width: 100%;
+    height: 14rem;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+  }
+
+  .blog__container>.row>.column-50>.card__image>a:hover>img {
+    scale: 1.2;
+  }
+
+  .blog__container>.row>.column-50>.card__body {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  .blog__container>.row>.column-50>.card__body>.upload__date {
+    margin: auto;
+    margin-left: 10px;
+    color: #777777;
+  }
+
+  .blog__container>.row>.card {
+    height: fit-content;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 3px;
+  }
+
+  .blog__container>.row>.column-100>.card__image {
+    width: 40%;
+    height: fit-content;
+    border-radius: 5px;
+    padding: 10px;
+    overflow: hidden;
+
+  }
+
+  .blog__container>.row>.column-100>.card__image>a>img {
+    width: 100%;
+    height: 14rem;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+  }
+
+  .blog__container>.row>.column-100>.card__image>a:hover>img {
+    scale: 1.2;
+  }
+
+  .blog__container>.row>.column-100>.card__body {
+    width: 50%;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .blog__container>.row>.column-100>.card__body>.upload__date {
+    width: 100%;
+    color: #686868;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .blog__container>.row>.card>.card__body>.card__title {
+    margin: 10px 0;
+    text-align: justify;
+  }
+
+  .blog__container>.row>.card>.card__body>.user__profile>p>.user__name {
+    font-weight: bold;
+    color: #e44a4a;
+  }
+
+
+
+
 /* ----------------BLOG DETAILS PAGE CSS FROM HERE---------------------- */
 .blog__details__container {
     width: 100%;
