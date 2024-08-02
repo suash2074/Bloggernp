@@ -13,7 +13,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* .hidden {
+.hidden {
     opacity: 0;
     filter: blur(5px);
     transition: all 1s;
@@ -24,7 +24,7 @@ html {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
-} */
+}
 /* 
 
 body {
