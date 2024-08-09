@@ -296,7 +296,8 @@ body {
 /* BLOG PREVIEW CSS STARTS HERE */
 
 .blog__preview,
-.about__container {
+.about__container,
+.faq__panel {
     position: relative;
     width: 100%;
     height: 32rem;
@@ -1855,7 +1856,7 @@ body {
 }
 
 .favourite__category>.category__list>figure>a:hover>img {
-    scale: 1.3  ;
+    scale: 1.3;
 }
 
 /* SUBSCRIPTION CSS */
@@ -2404,6 +2405,82 @@ label>.star {
     font-size: clamp(14px, 1.5vw, 16px);
 }
 
+/* FAQ CSS STARTS HERE */
+.faq-panel {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.faq-panel>.title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.faq-panel>.sub-title {
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #828282;
+}
+
+.faq-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.faq-item h3 {
+    margin: 0;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-item h3::after {
+    content: url(../Icons/Add-Circle--Streamline-Ultimate.png);
+    font-size: 1rem;
+    color: #666;
+    padding-right: 5px;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.open h3::after {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #555;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    padding: 0;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 300px;
+    padding: 10px 0;
+}
 
 /* MEDIA SCREEN FOR 1200px */
 
@@ -2737,6 +2814,25 @@ label>.star {
 
     .counter {
         flex-wrap: wrap;
+    }
+
+    /*  */
+
+    .faq-panel > .title {
+        font-size: 1.8rem;
+    }
+
+    .faq-panel > .sub-title {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .faq-container {
+        padding: 10px;
+    }
+
+    .faq-item h3 {
+        font-size: 1rem;
     }
 }
 
