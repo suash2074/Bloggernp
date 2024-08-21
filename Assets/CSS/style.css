@@ -296,8 +296,7 @@ body {
 /* BLOG PREVIEW CSS STARTS HERE */
 
 .blog__preview,
-.about__container,
-.faq__panel {
+.about__container{
     position: relative;
     width: 100%;
     height: 32rem;
@@ -2457,6 +2456,7 @@ label>.star {
 
 .faq-item h3::after {
     content: url(../Icons/Add-Circle--Streamline-Ultimate.png);
+    /* content: " "; */
     font-size: 1rem;
     color: #666;
     padding-right: 5px;
@@ -2524,11 +2524,12 @@ label>.star {
     }
 
     .navagation>.nav__list>ul:nth-last-child(1)>li>.dropdown {
-        box-shadow: 5px 5px 10px #d6d4d4, -5px -5px 10px #d6d4d4;
+        position: static;
+        /* box-shadow: 5px 5px 10px #d6d4d4, -5px -5px 10px #d6d4d4; */
         left: clamp(21vh, 45vw, 24vh);
-        /* Using clamp for left positioning */
         top: 3vh;
-        width: calc(90% - 135px);
+        width: calc(130% - 135px);
+        transition: 1s ease-in-out;
     }
 
     .navagation>.nav__list>ul>li>.dropdown>li {
